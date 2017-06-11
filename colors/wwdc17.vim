@@ -263,6 +263,7 @@ if has('nvim')
   let g:terminal_color_14='#f0f0f0'
   let g:terminal_color_15='#ffffff'
 endif
+hi vimCommentTitle ctermfg=5 ctermbg=NONE cterm=NONE guifg=#db2d45 guibg=NONE gui=NONE guisp=NONE
 hi vimMapModKey ctermfg=3 ctermbg=NONE cterm=NONE guifg=#e1ad0b guibg=NONE gui=NONE guisp=NONE
 hi vimMapMod ctermfg=3 ctermbg=NONE cterm=NONE guifg=#e1ad0b guibg=NONE gui=NONE guisp=NONE
 hi vimBracket ctermfg=6 ctermbg=NONE cterm=NONE guifg=#1faed0 guibg=NONE gui=NONE guisp=NONE

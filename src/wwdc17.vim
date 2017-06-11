@@ -338,6 +338,7 @@ endfor
 call append(line("$"), "endif")
 
 " Vim
+call s:hl("vimCommentTitle",          s:magenta,    s:none)
 call s:hl("vimMapModKey",             s:yellow,     s:none)
 call s:hl("vimMapMod",                s:yellow,     s:none)
 call s:hl("vimBracket",               s:teal,       s:none)
