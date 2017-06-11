@@ -277,7 +277,7 @@ call s:put("endif")
 call s:put("unlet s:fc")
 
 call s:hl("Boolean",             s:lemongreen, s:none)
-call s:hl("Character",           s:yellow,     s:none)
+call s:hl("Character",           s:magenta,    s:none)
 call s:hl("Comment",             s:grey,       s:none,       {'gui':    'NONE,italic'})
 call s:hl("Constant",            s:aqua,       s:none)
 call s:hl("Debug",               s:magenta,    s:none)

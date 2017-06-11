@@ -197,7 +197,7 @@ hi WildMenu ctermfg=7 ctermbg=5 cterm=NONE guifg=#f8f8f8 guibg=#db2d45 gui=NONE 
 endif
 unlet s:fc
 hi Boolean ctermfg=10 ctermbg=NONE cterm=NONE guifg=#afc06c guibg=NONE gui=NONE guisp=NONE
-hi Character ctermfg=3 ctermbg=NONE cterm=NONE guifg=#e1ad0b guibg=NONE gui=NONE guisp=NONE
+hi Character ctermfg=5 ctermbg=NONE cterm=NONE guifg=#db2d45 guibg=NONE gui=NONE guisp=NONE
 hi Comment ctermfg=13 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE,italic guisp=NONE
 hi Constant ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
 hi Debug ctermfg=5 ctermbg=NONE cterm=NONE guifg=#db2d45 guibg=NONE gui=NONE guisp=NONE
