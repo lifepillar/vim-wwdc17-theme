@@ -351,7 +351,9 @@ call s:hl("gitcommitComment",         s:grey,       s:none, {'gui':   'NONE,ital
 " Markdown
 call s:hl("markdownHeadingDelimiter", s:yellow,     s:none)
 call s:hl("markdownURL",              s:purple,     s:none)
-call s:hl("htmlItalic",               s:fg,         s:none, {'gui': 'NONE,italic'})
+call s:hl("htmlItalic",               s:fg,         s:none, {'gui':   'NONE,italic'})
+call s:hl("htmlBold",                 s:fg,         s:none, {'cterm': 'NONE,bold', 'gui': 'NONE,bold'})
+call s:hl("htmlBoldItalic",           s:fg,         s:none, {'cterm': 'NONE,bold', 'gui':   'NONE,bold,italic'})
 
 " JavaScript
 call s:hlink("javascriptBraces",      "Delimiter")
@@ -366,6 +368,7 @@ if get(g:, "wwdc17_term_italics", 0)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic
+  hi htmlBoldItalic cterm=NONE,bold,italic
   hi gitcommitComment cterm=italic
 endif
 .

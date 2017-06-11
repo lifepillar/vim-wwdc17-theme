@@ -273,6 +273,8 @@ hi gitcommitComment ctermfg=13 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE 
 hi markdownHeadingDelimiter ctermfg=3 ctermbg=NONE cterm=NONE guifg=#e1ad0b guibg=NONE gui=NONE guisp=NONE
 hi markdownURL ctermfg=12 ctermbg=NONE cterm=NONE guifg=#8c61a6 guibg=NONE gui=NONE guisp=NONE
 hi htmlItalic ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE,italic guisp=NONE
+hi htmlBold ctermfg=0 ctermbg=NONE cterm=NONE,bold guifg=#656567 guibg=NONE gui=NONE,bold guisp=NONE
+hi htmlBoldItalic ctermfg=0 ctermbg=NONE cterm=NONE,bold guifg=#656567 guibg=NONE gui=NONE,bold,italic guisp=NONE
 hi! link javascriptBraces Delimiter
 hi SyntasticErrorSign ctermfg=1 ctermbg=NONE cterm=NONE guifg=#e8503f guibg=NONE gui=NONE guisp=NONE
 hi SyntasticWarningSign ctermfg=3 ctermbg=NONE cterm=NONE guifg=#e1ad0b guibg=NONE gui=NONE guisp=NONE
@@ -280,5 +282,6 @@ if get(g:, "wwdc17_term_italics", 0)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic
+  hi htmlBoldItalic cterm=NONE,bold,italic
   hi gitcommitComment cterm=italic
 endif
