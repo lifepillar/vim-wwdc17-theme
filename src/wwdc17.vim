@@ -104,7 +104,7 @@ call s:put("")
 
 call s:hl("ColorColumn",         s:none,       s:vlightgrey)
 call s:hl("Conceal",             s:aqua,       s:none)
-call s:hl("Cursor",              s:bg,         s:red)
+call s:hl("Cursor",              s:none,       s:none,       {'cterm': 'NONE,reverse', 'gui': 'NONE,reverse'})
 call s:hlink("lCursor",          "Cursor")
 call s:hl("CursorIM",            s:none,       s:bg)
 call s:hl("CursorColumn",        s:none,       s:vlightgrey)

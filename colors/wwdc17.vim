@@ -27,7 +27,7 @@ let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '
 
 hi ColorColumn ctermfg=NONE ctermbg=14 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
 hi Conceal ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
-hi Cursor ctermfg=7 ctermbg=1 cterm=NONE guifg=#f8f8f8 guibg=#e8503f gui=NONE guisp=NONE
+hi Cursor ctermfg=NONE ctermbg=NONE cterm=NONE,reverse guifg=NONE guibg=NONE gui=NONE,reverse guisp=NONE
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=7 cterm=NONE guifg=NONE guibg=#f8f8f8 gui=NONE guisp=NONE
 hi CursorColumn ctermfg=NONE ctermbg=14 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
