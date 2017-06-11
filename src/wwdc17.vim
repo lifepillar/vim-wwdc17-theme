@@ -351,7 +351,7 @@ call s:hl("gitcommitComment",         s:grey,       s:none, {'gui':   'NONE,ital
 " Markdown
 call s:hl("markdownHeadingDelimiter", s:yellow,     s:none)
 call s:hl("markdownURL",              s:purple,     s:none)
-call s:hl("htmlItalic",               s:white,      s:none, {'gui': 'NONE,italic'})
+call s:hl("htmlItalic",               s:fg,         s:none, {'gui': 'NONE,italic'})
 
 " JavaScript
 call s:hlink("javascriptBraces",      "Delimiter")

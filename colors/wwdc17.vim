@@ -272,7 +272,7 @@ hi! link vimUserFunc Function
 hi gitcommitComment ctermfg=13 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE,italic guisp=NONE
 hi markdownHeadingDelimiter ctermfg=3 ctermbg=NONE cterm=NONE guifg=#e1ad0b guibg=NONE gui=NONE guisp=NONE
 hi markdownURL ctermfg=12 ctermbg=NONE cterm=NONE guifg=#8c61a6 guibg=NONE gui=NONE guisp=NONE
-hi htmlItalic ctermfg=7 ctermbg=NONE cterm=NONE guifg=#f8f8f8 guibg=NONE gui=NONE,italic guisp=NONE
+hi htmlItalic ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE,italic guisp=NONE
 hi! link javascriptBraces Delimiter
 hi SyntasticErrorSign ctermfg=1 ctermbg=NONE cterm=NONE guifg=#e8503f guibg=NONE gui=NONE guisp=NONE
 hi SyntasticWarningSign ctermfg=3 ctermbg=NONE cterm=NONE guifg=#e1ad0b guibg=NONE gui=NONE guisp=NONE
