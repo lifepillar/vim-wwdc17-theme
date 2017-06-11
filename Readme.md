@@ -33,6 +33,10 @@ Put the following options in your `vimrc` to customize the color scheme.
   This is the color of the status line, tab line, and vertical splits.
   The value of this option must be a number between `0` and `15`.
 
+- **Increase contrast:**
+
+        let g:wwdc17_high_contrast = 1
+
 - **Enable italics in the terminal:**
 
         let g:wwdc17_term_italics = 1
@@ -42,6 +46,8 @@ Put the following options in your `vimrc` to customize the color scheme.
 - **Use a transparent background in the terminal:**
 
         let g:wwdc17_term_trans_bg = 1
+
+The color palette is available through `g:wwdc17_palette`.
 
 
 ## Hacking
