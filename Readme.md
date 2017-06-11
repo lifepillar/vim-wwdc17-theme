@@ -31,7 +31,7 @@ Put the following options in your `vimrc` to customize the color scheme.
         let g:wwdc17_frame_color = 10
 
   This is the color of the status line, tab line, and vertical splits.
-  The value of this option must be a number between `0` and `15`.
+  The value of this option should be a number between `0` and `15`.
 
 - **Increase contrast:**
 
