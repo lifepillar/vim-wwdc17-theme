@@ -22,24 +22,8 @@ else
     hi Normal ctermfg=0 ctermbg=7 cterm=NONE guifg=#656567 guibg=#f8f8f8 gui=NONE
   endif
 endif
-let g:wwdc17_palette = [
-  \ ['#656567', '0'],
-  \ ['#e8503f', '1'],
-  \ ['#00a995', '2'],
-  \ ['#e1ad0b', '3'],
-  \ ['#3a5d6f', '4'],
-  \ ['#db2d45', '5'],
-  \ ['#1faed0', '6'],
-  \ ['#f8f8f8', '7'],
-  \ ['#333333', '8'],
-  \ ['#e4753e', '9'],
-  \ ['#afc06c', '10'],
-  \ ['#aaaaaa', '11'],
-  \ ['#8c61a6', '12'],
-  \ ['#888888', '13'],
-  \ ['#f0f0f0', '14'],
-  \ ['#ffffff', '15'],
-  \ ]
+
+let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f8f8f8', '#333333', '#e4753e', '#afc06c', '#aaaaaa', '#8c61a6', '#888888', '#f0f0f0', '#ffffff']
 
 hi ColorColumn ctermfg=NONE ctermbg=14 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
 hi Conceal ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
