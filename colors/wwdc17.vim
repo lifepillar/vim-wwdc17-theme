@@ -48,7 +48,7 @@ hi LineNr ctermfg=13 ctermbg=14 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE 
 hi MatchParen ctermfg=NONE ctermbg=NONE cterm=NONE,bold,underline guifg=NONE guibg=NONE gui=NONE,bold,underline guisp=#333333
 hi ModeMsg ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE guisp=NONE
 hi MoreMsg ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
-hi NonText ctermfg=7 ctermbg=NONE cterm=NONE guifg=#f8f8f8 guibg=NONE gui=NONE guisp=NONE
+hi NonText ctermfg=11 ctermbg=NONE cterm=NONE guifg=#aaaaaa guibg=NONE gui=NONE guisp=NONE
 hi Pmenu ctermfg=0 ctermbg=14 cterm=NONE guifg=#656567 guibg=#f0f0f0 gui=NONE guisp=NONE
 hi PmenuSbar ctermfg=9 ctermbg=11 cterm=NONE guifg=#e4753e guibg=#aaaaaa gui=NONE guisp=NONE
 hi PmenuSel ctermfg=7 ctermbg=9 cterm=NONE guifg=#f8f8f8 guibg=#e4753e gui=NONE guisp=NONE
