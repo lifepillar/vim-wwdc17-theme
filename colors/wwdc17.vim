@@ -54,6 +54,7 @@ hi PmenuSbar ctermfg=9 ctermbg=11 cterm=NONE guifg=#e4753e guibg=#aaaaaa gui=NON
 hi PmenuSel ctermfg=7 ctermbg=9 cterm=NONE guifg=#f8f8f8 guibg=#e4753e gui=NONE guisp=NONE
 hi PmenuThumb ctermfg=1 ctermbg=9 cterm=NONE guifg=#e8503f guibg=#e4753e gui=NONE guisp=NONE
 hi Question ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE guisp=NONE
+hi! link QuickFixLine Search
 hi Search ctermfg=3 ctermbg=7 cterm=NONE,reverse guifg=#e1ad0b guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
 hi SignColumn ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
 hi SpecialKey ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
