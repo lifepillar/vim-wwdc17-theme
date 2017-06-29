@@ -205,12 +205,12 @@ hi Debug ctermfg=5 ctermbg=NONE cterm=NONE guifg=#db2d45 guibg=NONE gui=NONE gui
 hi Delimiter ctermfg=4 ctermbg=NONE cterm=NONE guifg=#3a5d6f guibg=NONE gui=NONE guisp=NONE
 hi Float ctermfg=10 ctermbg=NONE cterm=NONE guifg=#afc06c guibg=NONE gui=NONE guisp=NONE
 hi Function ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
-hi Identifier ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
+hi Identifier ctermfg=4 ctermbg=NONE cterm=NONE guifg=#3a5d6f guibg=NONE gui=NONE guisp=NONE
 hi Ignore ctermfg=7 ctermbg=NONE cterm=NONE guifg=#f8f8f8 guibg=NONE gui=NONE guisp=NONE
 hi Include ctermfg=12 ctermbg=NONE cterm=NONE guifg=#8c61a6 guibg=NONE gui=NONE guisp=NONE
 hi Keyword ctermfg=6 ctermbg=NONE cterm=NONE guifg=#1faed0 guibg=NONE gui=NONE guisp=NONE
 hi Label ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
-hi Number ctermfg=4 ctermbg=NONE cterm=NONE guifg=#3a5d6f guibg=NONE gui=NONE guisp=NONE
+hi Number ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
 hi Operator ctermfg=6 ctermbg=NONE cterm=NONE guifg=#1faed0 guibg=NONE gui=NONE guisp=NONE
 hi PreProc ctermfg=1 ctermbg=NONE cterm=NONE guifg=#e8503f guibg=NONE gui=NONE guisp=NONE
 hi Special ctermfg=1 ctermbg=NONE cterm=NONE guifg=#e8503f guibg=NONE gui=NONE guisp=NONE
