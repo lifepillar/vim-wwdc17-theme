@@ -26,7 +26,8 @@ profiles are included in the repo.
 
 Put the following options in your `vimrc` to customize the color scheme.
 
-- **Choose you favourite frame color:**
+- **Give your theme a unique touch by selecting a different frame
+  color:**
 
         let g:wwdc17_frame_color = 10
 
