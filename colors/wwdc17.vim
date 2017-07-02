@@ -9,18 +9,30 @@ if exists('syntax_on')
 endif
 let colors_name = 'wwdc17'
 
-if !has('gui_running') && get(g:, 'wwdc17_term_trans_bg', 0)
-  if get(g:, 'wwdc17_high_contrast', 0)
-    hi Normal ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333333 guibg=NONE gui=NONE
+if get(g:, 'wwdc17_high_contrast', 0)
+  if !has('gui_running') && get(g:, 'wwdc17_term_trans_bg', 0)
+    hi Normal ctermfg=8 ctermbg=NONE cterm=NONE guifg=#333333 guibg=NONE gui=NONE guisp=NONE
+    hi LineNr ctermfg=13 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE guisp=NONE
+    hi CursorLineNr ctermfg=5 ctermbg=NONE cterm=NONE guifg=#db2d45 guibg=NONE gui=NONE guisp=NONE
   else
-    hi Normal ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE
+    hi Normal ctermfg=8 ctermbg=15 cterm=NONE guifg=#333333 guibg=#ffffff gui=NONE guisp=NONE
+    hi LineNr ctermfg=13 ctermbg=14 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE guisp=NONE
+    hi CursorLineNr ctermfg=5 ctermbg=14 cterm=NONE guifg=#db2d45 guibg=#f0f0f0 gui=NONE guisp=NONE
   endif
+  hi FoldColumn ctermfg=13 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE guisp=NONE
+  hi Folded ctermfg=13 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE,italic guisp=NONE
 else
-  if get(g:, 'wwdc17_high_contrast', 0)
-    hi Normal ctermfg=8 ctermbg=15 cterm=NONE guifg=#333333 guibg=#ffffff gui=NONE
+  if !has('gui_running') && get(g:, 'wwdc17_term_trans_bg', 0)
+    hi Normal ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE guisp=NONE
+    hi LineNr ctermfg=11 ctermbg=NONE cterm=NONE guifg=#aaaaaa guibg=NONE gui=NONE guisp=NONE
+    hi CursorLineNr ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
   else
-    hi Normal ctermfg=0 ctermbg=7 cterm=NONE guifg=#656567 guibg=#f8f8f8 gui=NONE
+    hi Normal ctermfg=0 ctermbg=7 cterm=NONE guifg=#656567 guibg=#f8f8f8 gui=NONE guisp=NONE
+    hi LineNr ctermfg=13 ctermbg=14 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE guisp=NONE
+    hi CursorLineNr ctermfg=9 ctermbg=14 cterm=NONE guifg=#e4753e guibg=#f0f0f0 gui=NONE guisp=NONE
   endif
+  hi FoldColumn ctermfg=11 ctermbg=NONE cterm=NONE guifg=#aaaaaa guibg=NONE gui=NONE guisp=NONE
+  hi Folded ctermfg=11 ctermbg=NONE cterm=NONE guifg=#aaaaaa guibg=NONE gui=NONE,italic guisp=NONE
 endif
 
 let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f8f8f8', '#333333', '#e4753e', '#afc06c', '#aaaaaa', '#8c61a6', '#888888', '#f0f0f0', '#ffffff']
@@ -32,7 +44,6 @@ hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=7 cterm=NONE guifg=NONE guibg=#f8f8f8 gui=NONE guisp=NONE
 hi CursorColumn ctermfg=NONE ctermbg=14 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
 hi CursorLine ctermfg=NONE ctermbg=14 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
-hi CursorLineNr ctermfg=2 ctermbg=14 cterm=NONE guifg=#00a995 guibg=#f0f0f0 gui=NONE guisp=NONE
 hi DiffAdd ctermfg=10 ctermbg=0 cterm=NONE,reverse guifg=#afc06c guibg=#656567 gui=NONE,reverse guisp=NONE
 hi DiffChange ctermfg=3 ctermbg=7 cterm=NONE,reverse guifg=#e1ad0b guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
 hi DiffDelete ctermfg=1 ctermbg=7 cterm=NONE,reverse guifg=#e8503f guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
@@ -41,10 +52,7 @@ hi Directory ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE
 hi EndOfBuffer ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
 hi Error ctermfg=1 ctermbg=7 cterm=NONE,reverse guifg=#e8503f guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
 hi ErrorMsg ctermfg=1 ctermbg=7 cterm=NONE,reverse guifg=#e8503f guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
-hi FoldColumn ctermfg=11 ctermbg=NONE cterm=NONE guifg=#aaaaaa guibg=NONE gui=NONE guisp=NONE
-hi Folded ctermfg=11 ctermbg=NONE cterm=NONE guifg=#aaaaaa guibg=NONE gui=NONE,italic guisp=NONE
 hi IncSearch ctermfg=3 ctermbg=7 cterm=NONE,reverse guifg=#e1ad0b guibg=#f8f8f8 gui=NONE,standout guisp=NONE
-hi LineNr ctermfg=13 ctermbg=14 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE guisp=NONE
 hi MatchParen ctermfg=NONE ctermbg=NONE cterm=NONE,bold,underline guifg=NONE guibg=NONE gui=NONE,bold,underline guisp=#333333
 hi ModeMsg ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE guisp=NONE
 hi MoreMsg ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
