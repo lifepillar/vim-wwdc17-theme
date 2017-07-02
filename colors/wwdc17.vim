@@ -177,11 +177,11 @@ elseif s:fc == 11
   hi VertSplit ctermfg=11 ctermbg=11 cterm=NONE guifg=#aaaaaa guibg=#aaaaaa gui=NONE guisp=NONE
   hi WildMenu ctermfg=7 ctermbg=5 cterm=NONE guifg=#f8f8f8 guibg=#db2d45 gui=NONE guisp=NONE
 elseif s:fc == 12
-  hi StatusLine ctermfg=12 ctermbg=7 cterm=NONE,reverse guifg=#8c61a6 guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
-  hi StatusLineNC ctermfg=12 ctermbg=11 cterm=NONE,reverse guifg=#8c61a6 guibg=#aaaaaa gui=NONE,reverse guisp=NONE
-  hi TabLine ctermfg=11 ctermbg=12 cterm=NONE guifg=#aaaaaa guibg=#8c61a6 gui=NONE guisp=NONE
-  hi TabLineFill ctermfg=11 ctermbg=12 cterm=NONE guifg=#aaaaaa guibg=#8c61a6 gui=NONE guisp=NONE
-  hi TabLineSel ctermfg=7 ctermbg=12 cterm=NONE guifg=#f8f8f8 guibg=#8c61a6 gui=NONE guisp=NONE
+  hi StatusLine ctermfg=12 ctermbg=15 cterm=NONE,bold,reverse guifg=#8c61a6 guibg=#ffffff gui=NONE,bold,reverse guisp=NONE
+  hi StatusLineNC ctermfg=12 ctermbg=14 cterm=NONE,reverse guifg=#8c61a6 guibg=#f0f0f0 gui=NONE,reverse guisp=NONE
+  hi TabLine ctermfg=14 ctermbg=12 cterm=NONE guifg=#f0f0f0 guibg=#8c61a6 gui=NONE guisp=NONE
+  hi TabLineFill ctermfg=14 ctermbg=12 cterm=NONE guifg=#f0f0f0 guibg=#8c61a6 gui=NONE guisp=NONE
+  hi TabLineSel ctermfg=15 ctermbg=12 cterm=NONE,bold guifg=#ffffff guibg=#8c61a6 gui=NONE,bold guisp=NONE
   hi VertSplit ctermfg=12 ctermbg=12 cterm=NONE guifg=#8c61a6 guibg=#8c61a6 gui=NONE guisp=NONE
   hi WildMenu ctermfg=7 ctermbg=5 cterm=NONE guifg=#f8f8f8 guibg=#db2d45 gui=NONE guisp=NONE
 elseif s:fc == 13
