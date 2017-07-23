@@ -84,7 +84,7 @@ if s:fc == 0
   hi StatusLine ctermfg=0 ctermbg=7 cterm=NONE,reverse guifg=#656567 guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
   hi StatusLineNC ctermfg=0 ctermbg=11 cterm=NONE,reverse guifg=#656567 guibg=#aaaaaa gui=NONE,reverse guisp=NONE
   hi TabLine ctermfg=11 ctermbg=0 cterm=NONE guifg=#aaaaaa guibg=#656567 gui=NONE guisp=NONE
-  hi TabLineFill ctermfg=11 ctermbg=0 cterm=NONE guifg=#aaaaaa guibg=#656567 gui=NONE guisp=NONE
+  hi TabLineFill ctermfg=7 ctermbg=0 cterm=NONE guifg=#f8f8f8 guibg=#656567 gui=NONE guisp=NONE
   hi TabLineSel ctermfg=7 ctermbg=0 cterm=NONE guifg=#f8f8f8 guibg=#656567 gui=NONE guisp=NONE
   hi VertSplit ctermfg=0 ctermbg=0 cterm=NONE guifg=#656567 guibg=#656567 gui=NONE guisp=NONE
   hi WildMenu ctermfg=7 ctermbg=5 cterm=NONE guifg=#f8f8f8 guibg=#db2d45 gui=NONE guisp=NONE
