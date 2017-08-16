@@ -1,4 +1,4 @@
-" Name:     WWDC18 colorscheme source file
+" Name:     WWDC17 colorscheme source file
 " Author:   Lifepillar <lifepillar@lifepillar.me>
 " License:  This file is placed in the public domain
 
