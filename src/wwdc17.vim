@@ -290,6 +290,9 @@ call s:hl("WildMenu",            s:bg,         s:magenta,    {'indent': 2})
 call s:put("endif")
 call s:put("unlet s:fc")
 
+call s:hlink("StatusLineTerm", "StatusLine")
+call s:hlink("StatusLineTermNC", "StatusLineNC")
+
 call s:hl("Boolean",             s:lemongreen, s:none)
 call s:hl("Character",           s:magenta,    s:none)
 call s:hl("Comment",             s:grey,       s:none,       {'gui':    'NONE,italic'})
