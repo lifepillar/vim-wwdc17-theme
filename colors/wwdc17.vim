@@ -71,7 +71,7 @@ hi! link QuickFixLine Search
 hi Search ctermfg=3 ctermbg=7 cterm=NONE,reverse guifg=#e1ad0b guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
 hi SignColumn ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
 hi SpecialKey ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
-hi SpellBad ctermfg=NONE ctermbg=NONE cterm=NONE,underline guifg=NONE guibg=NONE gui=NONE,undercurl guisp=#db2d45
+hi SpellBad ctermfg=12 ctermbg=NONE cterm=NONE,underline guifg=#8c61a6 guibg=NONE gui=NONE,undercurl guisp=#db2d45
 hi SpellCap ctermfg=12 ctermbg=NONE cterm=NONE,underline guifg=#8c61a6 guibg=NONE gui=NONE,undercurl guisp=#db2d45
 hi SpellLocal ctermfg=12 ctermbg=NONE cterm=NONE,underline guifg=#8c61a6 guibg=NONE gui=NONE,undercurl guisp=#db2d45
 hi SpellRare ctermfg=12 ctermbg=NONE cterm=NONE,underline guifg=#8c61a6 guibg=NONE gui=NONE,undercurl guisp=#db2d45
