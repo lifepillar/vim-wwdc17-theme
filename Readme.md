@@ -17,9 +17,11 @@ This color scheme works **out of the box** if you use:
 
 WWDC17 also works in MacVim, gVim, etc…: no configuration is needed.
 
-For terminals not supporting true colors, you *must* set your 16 terminal ASCII
-colors to the WWDC17 palette. For macOS's Terminal.app and iTerm2, terminal
-profiles are included in the repo.
+For terminals not supporting true colors, your terminal 16 ASCII colors should
+be set to the WWDC17 palette, too (otherwise, WWDC17 will just use whatever
+colors your terminal is currently using). For macOS's Terminal.app and iTerm2,
+terminal profiles are included in the repo (note that iTerm2 *does* support true
+colors).
 
 
 ## Options
