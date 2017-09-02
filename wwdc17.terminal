@@ -23,10 +23,11 @@
 	<key>ANSIBrightBlackColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
-	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NMMC4y
-	IDAuMiAwLjIAEAKAAtIQERITWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xvcqISFFhO
-	U09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3O0FITltib3Fz
-	eIOMlJegsrW6AAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAALw=
+	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
+	LjUzMzMzMzMzMzMgMC41MzMzMzMzMzMzIDAuNTMzMzMzMzMzMwAQAoAC0hAREhNaJGNs
+	YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hp
+	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
 	<key>ANSIBrightBlueColor</key>
 	<data>
@@ -41,7 +42,7 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
-	Ljk0MTE3NjQ3MDYgMC45NDExNzY0NzA2IDAuOTQxMTc2NDcwNgAQAoAC0hAREhNaJGNs
+	LjEyMTU2ODYyNzUgMC42ODIzNTI5NDEyIDAuODE1Njg2Mjc0NQAQAoAC0hAREhNaJGNs
 	YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hp
 	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
@@ -59,7 +60,7 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
-	LjUzMzMzMzMzMzMgMC41MzMzMzMzMzMzIDAuNTMzMzMzMzMzMwAQAoAC0hAREhNaJGNs
+	Ljg1ODgyMzUyOTQgMC4xNzY0NzA1ODgyIDAuMjcwNTg4MjM1MwAQAoAC0hAREhNaJGNs
 	YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hp
 	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
@@ -76,16 +77,17 @@
 	<key>ANSIBrightWhiteColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
-	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NGMSAx
-	IDEAEAKAAtIQERITWiRjbGFzc25hbWVYJGNsYXNzZXNXTlNDb2xvcqISFFhOU09iamVj
-	dF8QD05TS2V5ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3O0FITltiaWttcn2GjpGa
-	rK+0AAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
+	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
+	Ljk3MjU0OTAxOTYgMC45NzI1NDkwMTk2IDAuOTcyNTQ5MDE5NgAQAoAC0hAREhNaJGNs
+	YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hp
+	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
+	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
 	<key>ANSIBrightYellowColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
-	LjY2NjY2NjY2NjcgMC42NjY2NjY2NjY3IDAuNjY2NjY2NjY2NwAQAoAC0hAREhNaJGNs
+	Ljg4MjM1Mjk0MTIgMC42Nzg0MzEzNzI1IDAuMDQzMTM3MjU0OQAQAoAC0hAREhNaJGNs
 	YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hp
 	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
@@ -130,7 +132,7 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
-	Ljk3MjU0OTAxOTYgMC45NzI1NDkwMTk2IDAuOTcyNTQ5MDE5NgAQAoAC0hAREhNaJGNs
+	Ljk0MTE3NjQ3MDYgMC45NDExNzY0NzA2IDAuOTQxMTc2NDcwNgAQAoAC0hAREhNaJGNs
 	YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hp
 	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
@@ -182,9 +184,9 @@
 	<key>FontAntialias</key>
 	<true/>
 	<key>FontHeightSpacing</key>
-	<real>1.0900000000000001</real>
+	<real>1.0700000000000001</real>
 	<key>FontWidthSpacing</key>
-	<real>1.02</real>
+	<integer>1</integer>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0499999999999998</real>
 	<key>SelectionColor</key>
@@ -230,11 +232,128 @@
 	<integer>120</integer>
 	<key>deleteSendsBackspace</key>
 	<false/>
+	<key>keyMapBoundKeys</key>
+	<dict>
+		<key>#F739</key>
+		<string>toggleNumLock:</string>
+		<key>$F700</key>
+		<string>[1;2A</string>
+		<key>$F701</key>
+		<string>[1;2B</string>
+		<key>$F702</key>
+		<string>[1;2D</string>
+		<key>$F703</key>
+		<string>[1;2C</string>
+		<key>$F708</key>
+		<string>[25~</string>
+		<key>$F709</key>
+		<string>[26~</string>
+		<key>$F70A</key>
+		<string>[28~</string>
+		<key>$F70B</key>
+		<string>[29~</string>
+		<key>$F70C</key>
+		<string>[31~</string>
+		<key>$F70D</key>
+		<string>[32~</string>
+		<key>$F70E</key>
+		<string>[33~</string>
+		<key>$F70F</key>
+		<string>[34~</string>
+		<key>$F728</key>
+		<string>[3;2~</string>
+		<key>F704</key>
+		<string>OP</string>
+		<key>F705</key>
+		<string>OQ</string>
+		<key>F706</key>
+		<string>OR</string>
+		<key>F707</key>
+		<string>OS</string>
+		<key>F708</key>
+		<string>[15~</string>
+		<key>F709</key>
+		<string>[17~</string>
+		<key>F70A</key>
+		<string>[18~</string>
+		<key>F70B</key>
+		<string>[19~</string>
+		<key>F70C</key>
+		<string>[20~</string>
+		<key>F70D</key>
+		<string>[21~</string>
+		<key>F70E</key>
+		<string>[23~</string>
+		<key>F70F</key>
+		<string>[24~</string>
+		<key>F710</key>
+		<string>[25~</string>
+		<key>F711</key>
+		<string>[26~</string>
+		<key>F712</key>
+		<string>[28~</string>
+		<key>F713</key>
+		<string>[29~</string>
+		<key>F714</key>
+		<string>[31~</string>
+		<key>F715</key>
+		<string>[32~</string>
+		<key>F716</key>
+		<string>[33~</string>
+		<key>F717</key>
+		<string>[34~</string>
+		<key>F728</key>
+		<string>[3~</string>
+		<key>^F702</key>
+		<string>[1;5D</string>
+		<key>^F703</key>
+		<string>[1;5C</string>
+		<key>^F728</key>
+		<string>[3;5~</string>
+		<key>~F702</key>
+		<string>b</string>
+		<key>~F703</key>
+		<string>f</string>
+		<key>~F704</key>
+		<string>[17~</string>
+		<key>~F705</key>
+		<string>[18~</string>
+		<key>~F706</key>
+		<string>[19~</string>
+		<key>~F707</key>
+		<string>[20~</string>
+		<key>~F708</key>
+		<string>[21~</string>
+		<key>~F709</key>
+		<string>[23~</string>
+		<key>~F70A</key>
+		<string>[24~</string>
+		<key>~F70B</key>
+		<string>[25~</string>
+		<key>~F70C</key>
+		<string>[26~</string>
+		<key>~F70D</key>
+		<string>[28~</string>
+		<key>~F70E</key>
+		<string>[29~</string>
+		<key>~F70F</key>
+		<string>[31~</string>
+		<key>~F710</key>
+		<string>[32~</string>
+		<key>~F711</key>
+		<string>[33~</string>
+		<key>~F712</key>
+		<string>[34~</string>
+		<key>~^F728</key>
+		<string>[3;5~</string>
+	</dict>
 	<key>name</key>
 	<string>wwdc17</string>
 	<key>rowCount</key>
 	<integer>40</integer>
 	<key>type</key>
 	<string>Window Settings</string>
+	<key>useOptionAsMetaKey</key>
+	<true/>
 </dict>
 </plist>
