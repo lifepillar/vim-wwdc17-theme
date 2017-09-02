@@ -24,7 +24,7 @@ else
 endif
   hi FoldColumn ctermfg=8 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE guisp=NONE
 
-let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f0f0f0', '#888888', '#e4753e', '#afc06c', '#e1ad0b', '#8c61a6', '#db2d45', '#1faed0', '#f8f8f8']
+let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f0f0f0', '#888888', '#e4753e', '#afc06c', '#ebb822', '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
 
 hi ColorColumn ctermfg=NONE ctermbg=7 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
 hi Conceal ctermfg=2 ctermbg=NONE cterm=NONE guifg=#00a995 guibg=NONE gui=NONE guisp=NONE
@@ -152,12 +152,12 @@ elseif s:fc == 10
   hi VertSplit ctermfg=10 ctermbg=10 cterm=NONE guifg=#afc06c guibg=#afc06c gui=NONE guisp=NONE
   hi WildMenu ctermfg=15 ctermbg=5 cterm=NONE guifg=#f8f8f8 guibg=#db2d45 gui=NONE guisp=NONE
 elseif s:fc == 11
-  hi StatusLine ctermfg=11 ctermbg=15 cterm=NONE,reverse,bold guifg=#e1ad0b guibg=#f8f8f8 gui=NONE,reverse,bold guisp=NONE
-  hi StatusLineNC ctermfg=11 ctermbg=4 cterm=NONE,reverse guifg=#e1ad0b guibg=#3a5d6f gui=NONE,reverse guisp=NONE
-  hi TabLine ctermfg=4 ctermbg=11 cterm=NONE guifg=#3a5d6f guibg=#e1ad0b gui=NONE guisp=NONE
-  hi TabLineFill ctermfg=15 ctermbg=11 cterm=NONE guifg=#f8f8f8 guibg=#e1ad0b gui=NONE guisp=NONE
-  hi TabLineSel ctermfg=15 ctermbg=11 cterm=NONE,bold guifg=#f8f8f8 guibg=#e1ad0b gui=NONE,bold guisp=NONE
-  hi VertSplit ctermfg=11 ctermbg=11 cterm=NONE guifg=#e1ad0b guibg=#e1ad0b gui=NONE guisp=NONE
+  hi StatusLine ctermfg=11 ctermbg=15 cterm=NONE,reverse,bold guifg=#ebb822 guibg=#f8f8f8 gui=NONE,reverse,bold guisp=NONE
+  hi StatusLineNC ctermfg=11 ctermbg=4 cterm=NONE,reverse guifg=#ebb822 guibg=#3a5d6f gui=NONE,reverse guisp=NONE
+  hi TabLine ctermfg=4 ctermbg=11 cterm=NONE guifg=#3a5d6f guibg=#ebb822 gui=NONE guisp=NONE
+  hi TabLineFill ctermfg=15 ctermbg=11 cterm=NONE guifg=#f8f8f8 guibg=#ebb822 gui=NONE guisp=NONE
+  hi TabLineSel ctermfg=15 ctermbg=11 cterm=NONE,bold guifg=#f8f8f8 guibg=#ebb822 gui=NONE,bold guisp=NONE
+  hi VertSplit ctermfg=11 ctermbg=11 cterm=NONE guifg=#ebb822 guibg=#ebb822 gui=NONE guisp=NONE
   hi WildMenu ctermfg=15 ctermbg=5 cterm=NONE,bold guifg=#f8f8f8 guibg=#db2d45 gui=NONE,bold guisp=NONE
 elseif s:fc == 12
   hi StatusLine ctermfg=12 ctermbg=15 cterm=NONE,reverse,bold guifg=#8c61a6 guibg=#f8f8f8 gui=NONE,reverse,bold guisp=NONE
@@ -168,20 +168,20 @@ elseif s:fc == 12
   hi VertSplit ctermfg=12 ctermbg=12 cterm=NONE guifg=#8c61a6 guibg=#8c61a6 gui=NONE guisp=NONE
   hi WildMenu ctermfg=15 ctermbg=5 cterm=NONE,bold guifg=#f8f8f8 guibg=#db2d45 gui=NONE,bold guisp=NONE
 elseif s:fc == 13
-  hi StatusLine ctermfg=13 ctermbg=15 cterm=NONE,reverse guifg=#db2d45 guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
-  hi StatusLineNC ctermfg=13 ctermbg=3 cterm=NONE,reverse guifg=#db2d45 guibg=#e1ad0b gui=NONE,reverse guisp=NONE
-  hi TabLine ctermfg=3 ctermbg=13 cterm=NONE guifg=#e1ad0b guibg=#db2d45 gui=NONE guisp=NONE
-  hi TabLineFill ctermfg=15 ctermbg=13 cterm=NONE guifg=#f8f8f8 guibg=#db2d45 gui=NONE guisp=NONE
-  hi TabLineSel ctermfg=15 ctermbg=13 cterm=NONE guifg=#f8f8f8 guibg=#db2d45 gui=NONE guisp=NONE
-  hi VertSplit ctermfg=13 ctermbg=13 cterm=NONE guifg=#db2d45 guibg=#db2d45 gui=NONE guisp=NONE
+  hi StatusLine ctermfg=13 ctermbg=15 cterm=NONE,reverse guifg=#eb314b guibg=#f8f8f8 gui=NONE,reverse guisp=NONE
+  hi StatusLineNC ctermfg=13 ctermbg=3 cterm=NONE,reverse guifg=#eb314b guibg=#e1ad0b gui=NONE,reverse guisp=NONE
+  hi TabLine ctermfg=3 ctermbg=13 cterm=NONE guifg=#e1ad0b guibg=#eb314b gui=NONE guisp=NONE
+  hi TabLineFill ctermfg=15 ctermbg=13 cterm=NONE guifg=#f8f8f8 guibg=#eb314b gui=NONE guisp=NONE
+  hi TabLineSel ctermfg=15 ctermbg=13 cterm=NONE guifg=#f8f8f8 guibg=#eb314b gui=NONE guisp=NONE
+  hi VertSplit ctermfg=13 ctermbg=13 cterm=NONE guifg=#eb314b guibg=#eb314b gui=NONE guisp=NONE
   hi WildMenu ctermfg=15 ctermbg=3 cterm=NONE guifg=#f8f8f8 guibg=#e1ad0b gui=NONE guisp=NONE
 elseif s:fc == 14
-  hi StatusLine ctermfg=14 ctermbg=15 cterm=NONE,reverse,bold guifg=#1faed0 guibg=#f8f8f8 gui=NONE,reverse,bold guisp=NONE
-  hi StatusLineNC ctermfg=14 ctermbg=7 cterm=NONE,reverse guifg=#1faed0 guibg=#f0f0f0 gui=NONE,reverse guisp=NONE
-  hi TabLine ctermfg=7 ctermbg=14 cterm=NONE guifg=#f0f0f0 guibg=#1faed0 gui=NONE guisp=NONE
-  hi TabLineFill ctermfg=15 ctermbg=14 cterm=NONE guifg=#f8f8f8 guibg=#1faed0 gui=NONE guisp=NONE
-  hi TabLineSel ctermfg=15 ctermbg=14 cterm=NONE,bold guifg=#f8f8f8 guibg=#1faed0 gui=NONE,bold guisp=NONE
-  hi VertSplit ctermfg=14 ctermbg=14 cterm=NONE guifg=#1faed0 guibg=#1faed0 gui=NONE guisp=NONE
+  hi StatusLine ctermfg=14 ctermbg=15 cterm=NONE,reverse,bold guifg=#23bce1 guibg=#f8f8f8 gui=NONE,reverse,bold guisp=NONE
+  hi StatusLineNC ctermfg=14 ctermbg=7 cterm=NONE,reverse guifg=#23bce1 guibg=#f0f0f0 gui=NONE,reverse guisp=NONE
+  hi TabLine ctermfg=7 ctermbg=14 cterm=NONE guifg=#f0f0f0 guibg=#23bce1 gui=NONE guisp=NONE
+  hi TabLineFill ctermfg=15 ctermbg=14 cterm=NONE guifg=#f8f8f8 guibg=#23bce1 gui=NONE guisp=NONE
+  hi TabLineSel ctermfg=15 ctermbg=14 cterm=NONE,bold guifg=#f8f8f8 guibg=#23bce1 gui=NONE,bold guisp=NONE
+  hi VertSplit ctermfg=14 ctermbg=14 cterm=NONE guifg=#23bce1 guibg=#23bce1 gui=NONE guisp=NONE
   hi WildMenu ctermfg=15 ctermbg=5 cterm=NONE,bold guifg=#f8f8f8 guibg=#db2d45 gui=NONE,bold guisp=NONE
 elseif s:fc == 15
   hi StatusLine ctermfg=15 ctermbg=0 cterm=NONE,reverse guifg=#f8f8f8 guibg=#656567 gui=NONE,reverse guisp=NONE
@@ -240,10 +240,10 @@ if has('nvim')
   let g:terminal_color_8='#888888'
   let g:terminal_color_9='#e4753e'
   let g:terminal_color_10='#afc06c'
-  let g:terminal_color_11='#e1ad0b'
+  let g:terminal_color_11='#ebb822'
   let g:terminal_color_12='#8c61a6'
-  let g:terminal_color_13='#db2d45'
-  let g:terminal_color_14='#1faed0'
+  let g:terminal_color_13='#eb314b'
+  let g:terminal_color_14='#23bce1'
   let g:terminal_color_15='#f8f8f8'
 endif
 hi vimCommentTitle ctermfg=5 ctermbg=NONE cterm=NONE guifg=#db2d45 guibg=NONE gui=NONE guisp=NONE
