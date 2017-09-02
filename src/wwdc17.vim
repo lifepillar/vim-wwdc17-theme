@@ -317,8 +317,8 @@ call s:hl("CommandMode",              s:magenta,       s:bg,            {'cterm'
 
 " NeoVim
 call s:put("if has('nvim')")
-call s:hlink("TermCursor", "Cursor", { 'indent': 2})
-call s:hl("TermCursorNC",             s:bg,            s:fg,            { 'indent': 2 })
+call s:hlink("TermCursor", "Cursor", {'indent': 2})
+call s:hl("TermCursorNC",             s:bg,            s:fg,            {'indent': 2 })
 for cc in s:palette
   call s:put("  let g:terminal_color_".cc[1]."='".cc[0]."'")
 endfor
