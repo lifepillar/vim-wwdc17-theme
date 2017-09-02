@@ -10,19 +10,19 @@ endif
 let colors_name = 'wwdc17'
 
 if !has('gui_running') && get(g:, 'wwdc17_term_trans_bg', 0)
-    hi Normal ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE guisp=NONE
-    hi LineNr ctermfg=8 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE guisp=NONE
-    hi CursorLineNr ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
-    hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE,underline guifg=NONE guibg=NONE gui=NONE guisp=NONE
-    hi Folded ctermfg=8 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE,italic guisp=NONE
+  hi Normal ctermfg=0 ctermbg=NONE cterm=NONE guifg=#656567 guibg=NONE gui=NONE guisp=NONE
+  hi LineNr ctermfg=8 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE guisp=NONE
+  hi CursorLineNr ctermfg=9 ctermbg=NONE cterm=NONE guifg=#e4753e guibg=NONE gui=NONE guisp=NONE
+  hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE,underline guifg=NONE guibg=NONE gui=NONE guisp=NONE
+  hi Folded ctermfg=8 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE,italic guisp=NONE
 else
-    hi Normal ctermfg=0 ctermbg=15 cterm=NONE guifg=#656567 guibg=#f8f8f8 gui=NONE guisp=NONE
-    hi LineNr ctermfg=8 ctermbg=7 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE guisp=NONE
-    hi CursorLineNr ctermfg=9 ctermbg=7 cterm=NONE guifg=#e4753e guibg=#f0f0f0 gui=NONE guisp=NONE
-    hi CursorLine ctermfg=NONE ctermbg=7 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
-    hi Folded ctermfg=8 ctermbg=7 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE,italic guisp=NONE
+  hi Normal ctermfg=0 ctermbg=15 cterm=NONE guifg=#656567 guibg=#f8f8f8 gui=NONE guisp=NONE
+  hi LineNr ctermfg=8 ctermbg=7 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE guisp=NONE
+  hi CursorLineNr ctermfg=9 ctermbg=7 cterm=NONE guifg=#e4753e guibg=#f0f0f0 gui=NONE guisp=NONE
+  hi CursorLine ctermfg=NONE ctermbg=7 cterm=NONE guifg=NONE guibg=#f0f0f0 gui=NONE guisp=NONE
+  hi Folded ctermfg=8 ctermbg=7 cterm=NONE guifg=#888888 guibg=#f0f0f0 gui=NONE,italic guisp=NONE
 endif
-  hi FoldColumn ctermfg=8 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE guisp=NONE
+hi FoldColumn ctermfg=8 ctermbg=NONE cterm=NONE guifg=#888888 guibg=NONE gui=NONE guisp=NONE
 
 let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f0f0f0', '#888888', '#e4753e', '#afc06c', '#ebb822', '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
 
