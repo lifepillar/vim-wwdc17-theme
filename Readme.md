@@ -53,6 +53,8 @@ Put the following options in your `vimrc` to customize the color scheme.
 
 The color palette is available through `g:wwdc17_palette`.
 
+![WWDC17 Frames](https://raw.github.com/lifepillar/Resources/master/wwdc17/screenshot.png)
+
 
 ## Hacking
 
