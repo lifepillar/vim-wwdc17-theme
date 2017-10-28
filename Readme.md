@@ -45,14 +45,17 @@ Put the following options in your `vimrc` to customize the color scheme.
 
 - **Use a transparent background in the terminal:**
 
-        let g:wwdc17_term_trans_bg = 1
+        let g:wwdc17_transp_bg = 1
 
 The color palette is available through `g:wwdc17_palette`.
 
 
 ## Hacking
 
-Do you want to hack the theme? Edit `src/wwdc17.vim` and `:source` it to
-recreate the color scheme.
+Do you want to hack the theme? Install the
+[Colortemplate](https://github.com/lifepillar/vim-colortemplate) ftplugin and
+modify `wwdc16.colortemplate`, then rebuild the colorscheme with the
+`:Colortemplate` command.
 
 If you extend or improve WWDC17, please consider submitting a pull request!
+
