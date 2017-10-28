@@ -98,7 +98,7 @@ VisualNOS            brightwhite       blue
 WarningMsg           red               none
 
 verbatim
-let s:fc = abs(get(g:, 'wwdc17_frame_color', 10)) % 16
+let s:fc = abs(get(g:, '@shortname_frame_color', 10)) % 16
 if s:fc == 0
 endverbatim
 StatusLine           black             brightwhite       bold,reverse
@@ -377,7 +377,7 @@ SyntasticWarningSign yellow            none
 
 # Terminal italic
 verbatim
-if get(g:, "wwdc17_term_italics", 1)
+if get(g:, "@shortname_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
   hi htmlItalic cterm=italic
@@ -386,9 +386,9 @@ if get(g:, "wwdc17_term_italics", 1)
 endif
 endverbatim
 
-# WWDC16 color palette
+# WWDC17 color palette
 verbatim
-let g:wwdc17_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
+let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
     \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
     \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
 endverbatim
