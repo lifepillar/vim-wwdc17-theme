@@ -35,7 +35,7 @@ enddocumentation
 # Color palette {{{
 # Color name                GUI                  Base256    Base16 (optional)
 Color: black                rgb(101, 101, 103)     ~         0
-Color: red                  rgb(232,  80,  63)     ~         1
+Color: red                  rgb(232,  80,  63)     167       1
 Color: green                rgb(  0, 169, 149)     ~         2
 Color: yellow               rgb(225, 173,  11)     ~         3
 Color: blue                 rgb( 58,  93, 111)     ~         4

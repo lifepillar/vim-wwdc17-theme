@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sat Oct 28 14:09:20 2017
+" Last Updated: Sat Oct 28 19:36:12 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -35,7 +35,7 @@ let g:colors_name = 'wwdc17'
 "         green: GUI=#00a995/rgb(  0,169,149)  Term= 36 #00af87/rgb(  0,175,135)  [delta=6.104160]
 "     brightred: GUI=#e4753e/rgb(228,117, 62)  Term=173 #d7875f/rgb(215,135, 95)  [delta=6.108658]
 " brightmagenta: GUI=#eb314b/rgb(235, 49, 75)  Term=197 #ff005f/rgb(255,  0, 95)  [delta=6.411385]
-"           red: GUI=#e8503f/rgb(232, 80, 63)  Term=196 #ff0000/rgb(255,  0,  0)  [delta=7.634066]
+"           red: GUI=#e8503f/rgb(232, 80, 63)  Term=167 #d75f5f/rgb(215, 95, 95)  [delta=7.665136]
 "          blue: GUI=#3a5d6f/rgb( 58, 93,111)  Term= 24 #005f87/rgb(  0, 95,135)  [delta=7.871530]
 "       magenta: GUI=#db2d45/rgb(219, 45, 69)  Term=197 #ff005f/rgb(255,  0, 95)  [delta=8.426831]
 
@@ -328,11 +328,11 @@ hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,
 hi CursorColumn ctermfg=NONE ctermbg=102 guifg=NONE guibg=#888888 guisp=NONE cterm=NONE gui=NONE
 hi DiffAdd ctermfg=143 ctermbg=fg guifg=#afc06c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=178 ctermbg=231 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi DiffDelete ctermfg=196 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffDelete ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=38 ctermbg=231 guifg=#1faed0 guibg=#f8f8f8 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi Directory ctermfg=36 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi EndOfBuffer ctermfg=173 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi ErrorMsg ctermfg=196 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi ErrorMsg ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi FoldColumn ctermfg=102 ctermbg=NONE guifg=#888888 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi IncSearch ctermfg=178 ctermbg=231 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi MatchParen ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#656567 cterm=NONE,bold,underline gui=NONE,bold,underline
@@ -342,7 +342,7 @@ hi NonText ctermfg=102 ctermbg=NONE guifg=#888888 guibg=NONE guisp=NONE cterm=NO
 hi Pmenu ctermfg=fg ctermbg=255 guifg=fg guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=173 ctermbg=102 guifg=#e4753e guibg=#888888 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSel ctermfg=231 ctermbg=173 guifg=#f8f8f8 guibg=#e4753e guisp=NONE cterm=NONE gui=NONE
-hi PmenuThumb ctermfg=196 ctermbg=173 guifg=#e8503f guibg=#e4753e guisp=NONE cterm=NONE gui=NONE
+hi PmenuThumb ctermfg=167 ctermbg=173 guifg=#e8503f guibg=#e4753e guisp=NONE cterm=NONE gui=NONE
 hi Question ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search
 hi Search ctermfg=178 ctermbg=231 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -355,7 +355,7 @@ hi SpellRare ctermfg=197 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=#888888 cte
 hi Title ctermfg=173 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Visual ctermfg=24 ctermbg=231 guifg=#3a5d6f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualNOS ctermfg=231 ctermbg=24 guifg=#f8f8f8 guibg=#3a5d6f guisp=NONE cterm=NONE gui=NONE
-hi WarningMsg ctermfg=196 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WarningMsg ctermfg=167 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
 let s:fc = abs(get(g:, 'wwdc17_frame_color', 10)) % 16
 if s:fc == 0
 hi StatusLine ctermfg=241 ctermbg=231 guifg=#656567 guibg=#f8f8f8 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
@@ -366,12 +366,12 @@ hi TabLineSel ctermfg=231 ctermbg=241 guifg=#f8f8f8 guibg=#656567 guisp=NONE cte
 hi VertSplit ctermfg=241 ctermbg=241 guifg=#656567 guibg=#656567 guisp=NONE cterm=NONE gui=NONE
 hi WildMenu ctermfg=231 ctermbg=197 guifg=#f8f8f8 guibg=#db2d45 guisp=NONE cterm=NONE,bold gui=NONE,bold
 elseif s:fc == 1
-hi StatusLine ctermfg=196 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-hi StatusLineNC ctermfg=196 ctermbg=255 guifg=#e8503f guibg=#f0f0f0 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi TabLine ctermfg=255 ctermbg=196 guifg=#f0f0f0 guibg=#e8503f guisp=NONE cterm=NONE gui=NONE
-hi TabLineFill ctermfg=231 ctermbg=196 guifg=#f8f8f8 guibg=#e8503f guisp=NONE cterm=NONE gui=NONE
+hi StatusLine ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
+hi StatusLineNC ctermfg=167 ctermbg=255 guifg=#e8503f guibg=#f0f0f0 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi TabLine ctermfg=255 ctermbg=167 guifg=#f0f0f0 guibg=#e8503f guisp=NONE cterm=NONE gui=NONE
+hi TabLineFill ctermfg=231 ctermbg=167 guifg=#f8f8f8 guibg=#e8503f guisp=NONE cterm=NONE gui=NONE
 hi TabLineSel ctermfg=231 ctermbg=173 guifg=#f8f8f8 guibg=#e4753e guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi VertSplit ctermfg=196 ctermbg=196 guifg=#e8503f guibg=#e8503f guisp=NONE cterm=NONE gui=NONE
+hi VertSplit ctermfg=167 ctermbg=167 guifg=#e8503f guibg=#e8503f guisp=NONE cterm=NONE gui=NONE
 hi WildMenu ctermfg=231 ctermbg=143 guifg=#f8f8f8 guibg=#afc06c guisp=NONE cterm=NONE,bold gui=NONE,bold
 elseif s:fc == 2
 hi StatusLine ctermfg=36 ctermbg=231 guifg=#00a995 guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -497,7 +497,7 @@ hi Constant ctermfg=36 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NO
 hi! link Define PreProc
 hi Debug ctermfg=197 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Delimiter ctermfg=24 ctermbg=NONE guifg=#3a5d6f guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Error ctermfg=196 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi Error ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi! link Exception Statement
 hi Float ctermfg=143 ctermbg=NONE guifg=#afc06c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Function ctermfg=36 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -510,15 +510,15 @@ hi! link Macro PreProc
 hi Number ctermfg=36 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Operator ctermfg=38 ctermbg=NONE guifg=#1faed0 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link PreCondit PreProc
-hi PreProc ctermfg=196 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi PreProc ctermfg=167 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Repeat Statement
-hi Special ctermfg=196 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Special ctermfg=167 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpecialChar ctermfg=197 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpecialComment ctermfg=197 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Statement ctermfg=38 ctermbg=NONE guifg=#1faed0 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi StorageClass ctermfg=38 ctermbg=NONE guifg=#1faed0 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi String ctermfg=173 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Structure ctermfg=196 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Structure ctermfg=167 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Tag Special
 hi Todo ctermfg=197 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Type ctermfg=97 ctermbg=NONE guifg=#8c61a6 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -564,7 +564,7 @@ hi htmlItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE 
 hi htmlBold ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi! link javascriptBraces Delimiter
-hi SyntasticErrorSign ctermfg=196 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi SyntasticErrorSign ctermfg=167 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SyntasticWarningSign ctermfg=178 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
 if get(g:, "wwdc17_term_italics", 1)
   hi Comment cterm=italic
@@ -579,7 +579,7 @@ let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '
 endif
 
 " Color: black                rgb(101, 101, 103)     ~         0
-" Color: red                  rgb(232,  80,  63)     ~         1
+" Color: red                  rgb(232,  80,  63)     167       1
 " Color: green                rgb(  0, 169, 149)     ~         2
 " Color: yellow               rgb(225, 173,  11)     ~         3
 " Color: blue                 rgb( 58,  93, 111)     ~         4
