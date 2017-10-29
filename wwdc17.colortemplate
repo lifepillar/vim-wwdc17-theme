@@ -18,16 +18,22 @@ documentation
 ==============================================================================
 @fullname colorscheme                         *@shortname-colorscheme*
 
-                                                   *g:@optionprefix_frame_color*
+                                          *g:@optionprefix_frame_color*
 A number between 0 and 15 specifying the color for the status line, the tab
 line, and the vertical splits.
 >
   let g:@optionprefix_frame_color = 10
 <
-                                                   *g:@optionprefix_term_italics*
+                                          *g:@optionprefix_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:@optionprefix_term_italics = 1
+<
+                                          *g:@optionprefix_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:@optionprefix_transp_bg = 0
 <
 enddocumentation
 # }}}
@@ -55,15 +61,33 @@ Color: brightwhite          rgb(248, 248, 248)     ~         15
 Background: light
 
 # Default highlight groups {{{
-# Comment out (do not delete) the definitions that you want to keep at their default.
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+endverbatim
+    # Transparent background
+    Normal           black             none
+    CursorLine       none              none
+    CursorLineNr     brightred         none
+    Folded           brightblack       none              g=italic
+    LineNr           brightblack       none
+verbatim
+else
+endverbatim
+    # Opaque background
+    Normal black brightwhite
+    CursorLine       none              white
+    CursorLineNr     brightred         white
+    Folded           brightblack       white             g=italic
+    LineNr           brightblack       white
+verbatim
+endif
+endverbatim
+
 # Group              Foreground        Background        Attributes
-Normal               black             brightwhite
 ColorColumn          none              white
 Conceal              green             none
 Cursor               none              none              reverse
 CursorColumn         none              brightblack
-CursorLine           none              white/none
-CursorLineNr         brightred         white/none
 DiffAdd              brightgreen       fg                reverse
 DiffChange           yellow            brightwhite       reverse
 DiffDelete           red               brightwhite       reverse
@@ -72,9 +96,7 @@ Directory            green             none
 EndOfBuffer          brightred         none
 ErrorMsg             red               brightwhite       reverse
 FoldColumn           brightblack       none
-Folded               brightblack       white/none        g=italic
 IncSearch            yellow            brightwhite       t=reverse g=standout
-LineNr               brightblack       white/none
 MatchParen           none              none              bold,underline s=black
 ModeMsg              fg                none
 MoreMsg              brightred         none

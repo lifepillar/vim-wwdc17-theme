@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sat Oct 28 19:36:12 2017
+" Last Updated: Sun Oct 29 18:23:10 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -595,13 +595,28 @@ endif
 " Color: brightcyan           rgb( 35, 188, 225)     ~         14
 " Color: brightwhite          rgb(248, 248, 248)     ~         15
 " Background: light
-" Normal               black             brightwhite
+" verbatim
+" endverbatim
+"     Normal           black             none
+"     CursorLine       none              none
+"     CursorLineNr     brightred         none
+"     Folded           brightblack       none              g=italic
+"     LineNr           brightblack       none
+" verbatim
+" else
+" endverbatim
+"     Normal black brightwhite
+"     CursorLine       none              white
+"     CursorLineNr     brightred         white
+"     Folded           brightblack       white             g=italic
+"     LineNr           brightblack       white
+" verbatim
+" endif
+" endverbatim
 " ColorColumn          none              white
 " Conceal              green             none
 " Cursor               none              none              reverse
 " CursorColumn         none              brightblack
-" CursorLine           none              white/none
-" CursorLineNr         brightred         white/none
 " DiffAdd              brightgreen       fg                reverse
 " DiffChange           yellow            brightwhite       reverse
 " DiffDelete           red               brightwhite       reverse
@@ -610,9 +625,7 @@ endif
 " EndOfBuffer          brightred         none
 " ErrorMsg             red               brightwhite       reverse
 " FoldColumn           brightblack       none
-" Folded               brightblack       white/none        g=italic
 " IncSearch            yellow            brightwhite       t=reverse g=standout
-" LineNr               brightblack       white/none
 " MatchParen           none              none              bold,underline s=black
 " ModeMsg              fg                none
 " MoreMsg              brightred         none

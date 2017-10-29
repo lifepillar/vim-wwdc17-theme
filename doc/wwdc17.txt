@@ -2,26 +2,26 @@
 ==============================================================================
 WWDC17 colorscheme                         *wwdc17-colorscheme*
 
-                                                   *g:wwdc17_frame_color*
+                                          *g:wwdc17_frame_color*
 A number between 0 and 15 specifying the color for the status line, the tab
 line, and the vertical splits.
 >
   let g:wwdc17_frame_color = 10
 <
-                                                   *g:wwdc17_term_italics*
+                                          *g:wwdc17_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:wwdc17_term_italics = 1
 <
-==============================================================================
-WWDC17 other options                   *wwdc17-other-options*
-
                                           *g:wwdc17_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
   let g:wwdc17_transp_bg = 0
 <
+==============================================================================
+WWDC17 other options                   *wwdc17-other-options*
+
                                           *g:wwdc17_use16*
 Set to 0 if you want to use 256 colors.
 >
