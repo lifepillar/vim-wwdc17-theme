@@ -60,7 +60,7 @@ The color palette is available through `g:wwdc17_palette`.
 
 Do you want to hack the theme? Install the
 [Colortemplate](https://github.com/lifepillar/vim-colortemplate) ftplugin and
-modify `wwdc16.colortemplate`, then rebuild the colorscheme with the
+modify `wwdc17.colortemplate`, then rebuild the colorscheme with the
 `:Colortemplate` command.
 
 If you extend or improve WWDC17, please consider submitting a pull request!
