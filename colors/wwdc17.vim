@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sun Oct 29 18:23:10 2017
+" Last Updated: Sat Nov  4 20:43:49 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -65,7 +65,7 @@ hi Directory ctermfg=2 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NO
 hi EndOfBuffer ctermfg=9 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi ErrorMsg ctermfg=1 ctermbg=15 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi FoldColumn ctermfg=8 ctermbg=NONE guifg=#888888 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi IncSearch ctermfg=3 ctermbg=15 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,standout
+hi IncSearch ctermfg=9 ctermbg=15 guifg=#e4753e guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi MatchParen ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#656567 cterm=NONE,bold,underline gui=NONE,bold,underline
 hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=9 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -76,7 +76,7 @@ hi PmenuSel ctermfg=15 ctermbg=9 guifg=#f8f8f8 guibg=#e4753e guisp=NONE cterm=NO
 hi PmenuThumb ctermfg=1 ctermbg=9 guifg=#e8503f guibg=#e4753e guisp=NONE cterm=NONE gui=NONE
 hi Question ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search
-hi Search ctermfg=3 ctermbg=15 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi Search ctermfg=11 ctermbg=15 guifg=#ebb822 guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi SignColumn ctermfg=9 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpecialKey ctermfg=9 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpellBad ctermfg=5 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=#888888 cterm=NONE,underline gui=NONE,undercurl
@@ -334,7 +334,7 @@ hi Directory ctermfg=36 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=N
 hi EndOfBuffer ctermfg=173 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi ErrorMsg ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi FoldColumn ctermfg=102 ctermbg=NONE guifg=#888888 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi IncSearch ctermfg=178 ctermbg=231 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,standout
+hi IncSearch ctermfg=173 ctermbg=231 guifg=#e4753e guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi MatchParen ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#656567 cterm=NONE,bold,underline gui=NONE,bold,underline
 hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=173 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -345,7 +345,7 @@ hi PmenuSel ctermfg=231 ctermbg=173 guifg=#f8f8f8 guibg=#e4753e guisp=NONE cterm
 hi PmenuThumb ctermfg=167 ctermbg=173 guifg=#e8503f guibg=#e4753e guisp=NONE cterm=NONE gui=NONE
 hi Question ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search
-hi Search ctermfg=178 ctermbg=231 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi Search ctermfg=178 ctermbg=231 guifg=#ebb822 guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi SignColumn ctermfg=173 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpecialKey ctermfg=173 ctermbg=NONE guifg=#e4753e guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi SpellBad ctermfg=197 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=#888888 cterm=NONE,underline gui=NONE,undercurl
@@ -625,7 +625,7 @@ endif
 " EndOfBuffer          brightred         none
 " ErrorMsg             red               brightwhite       reverse
 " FoldColumn           brightblack       none
-" IncSearch            yellow            brightwhite       t=reverse g=standout
+" IncSearch            brightred         brightwhite       t=reverse g=standout
 " MatchParen           none              none              bold,underline s=black
 " ModeMsg              fg                none
 " MoreMsg              brightred         none
@@ -636,7 +636,7 @@ endif
 " PmenuThumb           red               brightred
 " Question             fg                none
 " QuickFixLine     ->  Search
-" Search               yellow            brightwhite       reverse
+" Search               brightyellow      brightwhite       reverse
 " SignColumn           brightred         none
 " SpecialKey           brightred         none
 " SpellBad             magenta           none              s=brightblack t=underline g=undercurl

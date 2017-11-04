@@ -96,7 +96,7 @@ Directory            green             none
 EndOfBuffer          brightred         none
 ErrorMsg             red               brightwhite       reverse
 FoldColumn           brightblack       none
-IncSearch            yellow            brightwhite       t=reverse g=standout
+IncSearch            brightred         brightwhite       t=reverse g=standout
 MatchParen           none              none              bold,underline s=black
 ModeMsg              fg                none
 MoreMsg              brightred         none
@@ -107,7 +107,7 @@ PmenuSel             brightwhite       brightred
 PmenuThumb           red               brightred
 Question             fg                none
 QuickFixLine     ->  Search
-Search               yellow            brightwhite       reverse
+Search               brightyellow      brightwhite       reverse
 SignColumn           brightred         none
 SpecialKey           brightred         none
 SpellBad             magenta           none              s=brightblack t=underline g=undercurl
