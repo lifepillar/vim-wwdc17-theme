@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sun Nov 12 18:45:47 2017
+" Last Updated: Sun Nov 12 21:17:24 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -23,6 +23,10 @@ let g:colors_name = 'wwdc17'
 
 " 256-color variant
 if !get(g:, 'wwdc17_use16', 0)
+  let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45',
+        \                   '#1faed0', '#f0f0f0', '#888888', '#afc06c', '#ebb822',
+        \                   '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
+
   " Color similarity table (light background)
   "   brightblack: GUI=#888888/rgb(136,136,136)  Term=102 #878787/rgb(135,135,135)  [delta=0.359050]
   "         white: GUI=#f0f0f0/rgb(240,240,240)  Term=255 #eeeeee/rgb(238,238,238)  [delta=0.419881]
@@ -304,13 +308,14 @@ if !get(g:, 'wwdc17_use16', 0)
     hi htmlBoldItalic cterm=NONE,bold,italic
     hi gitcommitComment cterm=italic
   endif
-  let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45',
-        \                   '#1faed0', '#f0f0f0', '#888888', '#afc06c', '#ebb822',
-        \                   '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
   finish
 endif
 
 " 16-color variant
+let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45',
+      \                   '#1faed0', '#f0f0f0', '#888888', '#afc06c', '#ebb822',
+      \                   '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
+
 if !has('gui_running') && get(g:, 'wwdc17_transp_bg', 0)
   hi Normal ctermfg=0 ctermbg=NONE guifg=#656567 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi CursorLine ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -575,9 +580,6 @@ if get(g:, "wwdc17_term_italics", 1)
   hi htmlBoldItalic cterm=NONE,bold,italic
   hi gitcommitComment cterm=italic
 endif
-let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45',
-      \                   '#1faed0', '#f0f0f0', '#888888', '#afc06c', '#ebb822',
-      \                   '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
 finish
 
 " Color: black                rgb(101, 101, 103)     ~         0

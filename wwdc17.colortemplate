@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker ts=8
+# vim: ft=colortemplate fdm=marker
 
 # Information {{{
 # Mandatory
@@ -14,28 +14,7 @@ Terminal Colors: 256,16
 # }}}
 
 # Documentation {{{
-documentation
-==============================================================================
-@fullname colorscheme			*@shortname-colorscheme*
-
-						*g:@optionprefix_frame_color*
-A number between 0 and 15 specifying the color for the status line, the tab
-line, and the vertical splits.
->
-  let g:@optionprefix_frame_color = 10
-<
-						*g:@optionprefix_term_italics*
-Set to 0 if you want to disable italics in the terminal.
->
-  let g:@optionprefix_term_italics = 1
-<
-						*g:@optionprefix_transp_bg*
-Set to 1 if you want a transparent background. Takes effect only in the
-terminal.
->
-  let g:@optionprefix_transp_bg = 0
-<
-enddocumentation
+Include: _help.colortemplate
 # }}}
 
 # Color palette {{{
@@ -56,6 +35,12 @@ Color: brightblue           rgb(140,  97, 166)     ~         12
 Color: brightmagenta        rgb(235,  49,  75)     ~         13
 Color: brightcyan           rgb( 35, 188, 225)     ~         14
 Color: brightwhite          rgb(248, 248, 248)     ~         15
+
+verbatim
+let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
+    \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
+    \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
+endverbatim
 # }}}
 
 Background: light
@@ -339,7 +324,7 @@ VisualMode           blue              brightwhite       reverse
 CommandMode          magenta           brightwhite       reverse
 # }}}
 
-# NeoVim
+# NeoVim {{{
 verbatim
 if has('nvim')
 endverbatim
@@ -364,9 +349,6 @@ let g:terminal_color_14='@guibrightcyan'
 let g:terminal_color_15='@guibrightwhite'
 endif
 endverbatim
-
-
-# Plugin specific highlight groups {{{
 # }}}
 
 # Filetype specific highlight groups {{{
@@ -397,7 +379,7 @@ SyntasticWarningSign yellow            none
 # }}}
 # }}}
 
-# Terminal italic
+# Terminal italic {{{
 verbatim
 if get(g:, "@optionprefix_term_italics", 1)
   hi Comment cterm=italic
@@ -407,10 +389,4 @@ if get(g:, "@optionprefix_term_italics", 1)
   hi gitcommitComment cterm=italic
 endif
 endverbatim
-
-# WWDC17 color palette
-verbatim
-let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
-    \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
-    \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
-endverbatim
+# }}}
