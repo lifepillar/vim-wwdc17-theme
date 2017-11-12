@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+# vim: ft=colortemplate fdm=marker ts=8
 
 # Information {{{
 # Mandatory
@@ -10,26 +10,26 @@ Maintainer:  Lifepillar <lifepillar@lifepillar.me>
 Website:     https://github.com/lifepillar/vim-wwdc17-theme
 Description: Colorful light color scheme for Vim inspired by Apple's WWDC17 page
 License:     This file is placed in the public domain
-Terminal Colors: 16, 256
+Terminal Colors: 256,16
 # }}}
 
 # Documentation {{{
 documentation
 ==============================================================================
-@fullname colorscheme                         *@shortname-colorscheme*
+@fullname colorscheme			*@shortname-colorscheme*
 
-                                          *g:@optionprefix_frame_color*
+						*g:@optionprefix_frame_color*
 A number between 0 and 15 specifying the color for the status line, the tab
 line, and the vertical splits.
 >
   let g:@optionprefix_frame_color = 10
 <
-                                          *g:@optionprefix_term_italics*
+						*g:@optionprefix_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:@optionprefix_term_italics = 1
 <
-                                          *g:@optionprefix_transp_bg*
+						*g:@optionprefix_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
