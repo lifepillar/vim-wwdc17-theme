@@ -72,7 +72,7 @@ endverbatim
 ColorColumn          none              white
 Conceal              green             none
 Cursor               none              none              reverse
-CursorColumn         none              brightblack
+CursorColumn         none              white
 DiffAdd              brightgreen       fg                reverse
 DiffChange           yellow            brightwhite       reverse
 DiffDelete           red               brightwhite       reverse

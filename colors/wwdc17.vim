@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sun Nov 12 21:17:24 2017
+" Last Updated: Mon Nov 13 21:38:49 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -60,7 +60,7 @@ if !get(g:, 'wwdc17_use16', 0)
   hi ColorColumn ctermfg=NONE ctermbg=255 guifg=NONE guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
   hi Conceal ctermfg=36 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  hi CursorColumn ctermfg=NONE ctermbg=102 guifg=NONE guibg=#888888 guisp=NONE cterm=NONE gui=NONE
+  hi CursorColumn ctermfg=NONE ctermbg=255 guifg=NONE guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
   hi DiffAdd ctermfg=143 ctermbg=fg guifg=#afc06c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffChange ctermfg=178 ctermbg=231 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi DiffDelete ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -332,7 +332,7 @@ endif
 hi ColorColumn ctermfg=NONE ctermbg=7 guifg=NONE guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
 hi Conceal ctermfg=2 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi CursorColumn ctermfg=NONE ctermbg=8 guifg=NONE guibg=#888888 guisp=NONE cterm=NONE gui=NONE
+hi CursorColumn ctermfg=NONE ctermbg=7 guifg=NONE guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
 hi DiffAdd ctermfg=10 ctermbg=fg guifg=#afc06c guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=3 ctermbg=15 guifg=#e1ad0b guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffDelete ctermfg=1 ctermbg=15 guifg=#e8503f guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -612,7 +612,7 @@ finish
 " ColorColumn          none              white
 " Conceal              green             none
 " Cursor               none              none              reverse
-" CursorColumn         none              brightblack
+" CursorColumn         none              white
 " DiffAdd              brightgreen       fg                reverse
 " DiffChange           yellow            brightwhite       reverse
 " DiffDelete           red               brightwhite       reverse
