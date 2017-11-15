@@ -11,21 +11,22 @@ Looking for a companion dark theme? Check out
 This color scheme works **out of the box everywhere**. For the best experience,
 you need:
 
-- Vim ≥7.4.1799 with `termguicolors` set, or
-- NeoVim,
+- Vim ≥7.4.1799, or NeoVim, with `termguicolors` set, **and**
+- [a true-color enabled terminal](https://gist.github.com/XVilka/8346728).
 
-**and** a true-color enabled terminal (e.g., [iTerm2](https://www.iterm2.com)).
 WWDC17 also works in MacVim, gVim, etc…: no configuration is needed.
 
-**Note:** for terminals not supporting true colors, WWDC17 will fall back to use
-an approximate palette based on xterm's 256 colors. If you want exact colors in
-such terminals, you must set your terminal's 16 ANSI color to the WWDC17 palette
-(a terminal profile for macOS's Terminal.app is included in the plugin) and put
-this in your `vimrc`:
+For terminals not supporting true colors, WWDC17 will fall back to use a (pretty
+good) approximate palette based on xterm's 256 colors. If you want exact colors
+in such terminals, you must set your terminal's 16 ANSI color to the WWDC17
+palette (a terminal profile for macOS's Terminal.app is included in the plugin)
+and put this in your `vimrc`:
 
    ```vim
    let g:wwdc17_use16 = 1
    ```
+Be aware that, if you set the variable above, but your terminal does not use the
+WWDC17 palette, your colors will be completely off. 
 
 
 ## Options
