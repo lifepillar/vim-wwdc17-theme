@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Mon Nov 13 21:38:49 2017
+" Last Updated: Mon Nov 20 22:17:08 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -261,6 +261,9 @@ if !get(g:, 'wwdc17_use16', 0)
   hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
   hi! link lCursor Cursor
   hi CursorIM ctermfg=NONE ctermbg=231 guifg=NONE guibg=#f8f8f8 guisp=NONE cterm=NONE gui=NONE
+  hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
+  hi ToolbarLine ctermfg=102 ctermbg=255 guifg=#888888 guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
+  hi ToolbarButton ctermfg=241 ctermbg=255 guifg=#656567 guibg=#f0f0f0 guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi NormalMode ctermfg=102 ctermbg=231 guifg=#888888 guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi InsertMode ctermfg=143 ctermbg=231 guifg=#afc06c guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi ReplaceMode ctermfg=173 ctermbg=231 guifg=#e4753e guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -533,6 +536,9 @@ hi! link Typedef Type
 hi Underlined ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=15 guifg=NONE guibg=#f8f8f8 guisp=NONE cterm=NONE gui=NONE
+hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
+hi ToolbarLine ctermfg=8 ctermbg=7 guifg=#888888 guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
+hi ToolbarButton ctermfg=0 ctermbg=7 guifg=#656567 guibg=#f0f0f0 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NormalMode ctermfg=8 ctermbg=15 guifg=#888888 guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi InsertMode ctermfg=10 ctermbg=15 guifg=#afc06c guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi ReplaceMode ctermfg=9 ctermbg=15 guifg=#e4753e guibg=#f8f8f8 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -794,6 +800,9 @@ finish
 " Underlined           none              none              underline
 " lCursor           -> Cursor
 " CursorIM             none              brightwhite
+" Terminal             fg                bg
+" ToolbarLine          brightblack       white
+" ToolbarButton        black             white             bold
 " NormalMode           brightblack       brightwhite       reverse
 " InsertMode           brightgreen       brightwhite       reverse
 " ReplaceMode          brightred         brightwhite       reverse
