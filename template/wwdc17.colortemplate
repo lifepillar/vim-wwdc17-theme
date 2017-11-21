@@ -55,6 +55,7 @@ endverbatim
     CursorLineNr     brightred         none
     Folded           brightblack       none              g=italic
     LineNr           brightblack       none
+    Terminal         fg                none
 verbatim
 else
 endverbatim
@@ -64,6 +65,7 @@ endverbatim
     CursorLineNr     brightred         white
     Folded           brightblack       white             g=italic
     LineNr           brightblack       white
+    Terminal         fg                bg
 verbatim
 endif
 endverbatim
@@ -313,8 +315,6 @@ Underlined           none              none              underline
 lCursor           -> Cursor
 # See `:help CursorIM`
 CursorIM             none              brightwhite
-# See `:help terminal-size-color`
-Terminal             fg                bg
 # See `:help window-toolbar`
 ToolbarLine          brightblack       white
 ToolbarButton        black             white             bold
