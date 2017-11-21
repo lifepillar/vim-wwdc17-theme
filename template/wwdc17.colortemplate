@@ -65,7 +65,7 @@ endverbatim
     CursorLineNr     brightred         white
     Folded           brightblack       white             g=italic
     LineNr           brightblack       white
-    Terminal         fg                bg
+    Terminal         fg                white
 verbatim
 endif
 endverbatim

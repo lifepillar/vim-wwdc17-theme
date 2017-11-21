@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Tue Nov 21 09:07:17 2017
+" Last Updated: Tue Nov 21 09:41:33 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -57,7 +57,7 @@ if !get(g:, 'wwdc17_use16', 0)
     hi CursorLineNr ctermfg=173 ctermbg=255 guifg=#e4753e guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
     hi Folded ctermfg=102 ctermbg=255 guifg=#888888 guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE,italic
     hi LineNr ctermfg=102 ctermbg=255 guifg=#888888 guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
-    hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
+    hi Terminal ctermfg=fg ctermbg=255 guifg=fg guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
   endif
   hi ColorColumn ctermfg=NONE ctermbg=255 guifg=NONE guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
   hi Conceal ctermfg=36 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -333,7 +333,7 @@ else
   hi CursorLineNr ctermfg=9 ctermbg=7 guifg=#e4753e guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
   hi Folded ctermfg=8 ctermbg=7 guifg=#888888 guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE,italic
   hi LineNr ctermfg=8 ctermbg=7 guifg=#888888 guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
-  hi Terminal ctermfg=fg ctermbg=bg guifg=fg guibg=bg guisp=NONE cterm=NONE gui=NONE
+  hi Terminal ctermfg=fg ctermbg=7 guifg=fg guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
 endif
 hi ColorColumn ctermfg=NONE ctermbg=7 guifg=NONE guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
 hi Conceal ctermfg=2 ctermbg=NONE guifg=#00a995 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -618,7 +618,7 @@ finish
 "     CursorLineNr     brightred         white
 "     Folded           brightblack       white             g=italic
 "     LineNr           brightblack       white
-"     Terminal         fg                bg
+"     Terminal         fg                white
 " ColorColumn          none              white
 " Conceal              green             none
 " Cursor               none              none              reverse
