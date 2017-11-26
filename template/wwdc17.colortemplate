@@ -395,3 +395,7 @@ if get(g:, "@optionprefix_term_italics", 1)
 endif
 endverbatim
 # }}}
+
+# Demo :) {{{
+Include: _demo.colortemplate
+# }}}

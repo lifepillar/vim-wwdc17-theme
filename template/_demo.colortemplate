@@ -1,0 +1,58 @@
+# vim: ft=colortemplate fdm=marker
+
+auxfile demo.vim
+" Source me :)
+colorscheme wwdc17
+silent tabnew
+insert
+
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+ ●●●●●●●●●●●●●●●●●●●
+
+.
+
+for col in g:wwdc17_palette
+  call append('$', col . ' '
+        \ . repeat(col == '@guibrightwhite' ? ' ' : '▇', 60)
+        \ . ' rgb(' . join(colortemplate#colorspace#hex2rgb(col), ', ')  . ')')
+endfor
+
+for i in range(2,11)
+  for j in range(2,21)
+    let k = abs(float2nr(pow(i,j)) % 17) " Incredibly clever pseudo-random generator ;)
+    execute 'syn match WWDC17Demo'.k '/\%(\%'.i.'l\%'.j.'v\)./'
+  endfor
+endfor
+
+for i in range(13,13+14)
+  execute 'syn match WWDC17Demo'.(i-13) '/\%'.i.'l.*/'
+endfor
+syn match WWDC17Demo0 /\%28l.*/
+
+hi WWDC17Demo0 ctermfg=@black ctermbg=NONE guifg=@black guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo1 ctermfg=@red ctermbg=NONE guifg=@red guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo2 ctermfg=@green ctermbg=NONE guifg=@green guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo3 ctermfg=@yellow ctermbg=NONE guifg=@yellow guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo4 ctermfg=@blue ctermbg=NONE guifg=@blue guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo5 ctermfg=@magenta ctermbg=NONE guifg=@magenta guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo6 ctermfg=@cyan ctermbg=NONE guifg=@cyan guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo7 ctermfg=@white ctermbg=NONE guifg=@white guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo8 ctermfg=@brightblack ctermbg=NONE guifg=@brightblack guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo9 ctermfg=@brightred ctermbg=NONE guifg=@brightred guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo10 ctermfg=@brightgreen ctermbg=NONE guifg=@brightgreen guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo11 ctermfg=@brightyellow ctermbg=NONE guifg=@brightyellow guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo12 ctermfg=@brightblue ctermbg=NONE guifg=@brightblue guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo13 ctermfg=@brightmagenta ctermbg=NONE guifg=@brightmagenta guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo14 ctermfg=@brightcyan ctermbg=NONE guifg=@brightcyan guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo15 ctermfg=@brightwhite ctermbg=NONE guifg=@brightwhite guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo16 ctermfg=@blue ctermbg=NONE guifg=@blue guibg=NONE guisp=NONE cterm=NONE gui=NONE
+endauxfile
+
