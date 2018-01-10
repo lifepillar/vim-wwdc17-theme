@@ -55,6 +55,7 @@ endverbatim
     CursorLineNr     brightred         none
     Folded           brightblack       none              g=italic
     LineNr           brightblack       none
+    FoldColumn       brightblack       none
     Terminal         fg                none
 verbatim
 else
@@ -65,6 +66,7 @@ endverbatim
     CursorLineNr     brightred         white
     Folded           brightblack       white             g=italic
     LineNr           brightblack       white
+    FoldColumn       brightblack       white
     Terminal         fg                white
 verbatim
 endif
@@ -82,7 +84,6 @@ DiffText             cyan              brightwhite       bold,reverse
 Directory            green             none
 EndOfBuffer          brightred         none
 ErrorMsg             red               brightwhite       reverse
-FoldColumn           brightblack       none
 IncSearch            brightred         brightwhite       t=reverse g=standout
 MatchParen           none              none              bold,underline s=black
 ModeMsg              fg                none
