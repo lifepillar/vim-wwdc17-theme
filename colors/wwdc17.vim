@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Wed Jan 10 20:17:45 2018
+" Last Updated: Wed Jan 10 20:24:20 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -291,27 +291,9 @@ if !get(g:, 'wwdc17_use16', 0)
     let g:terminal_color_14='#23bce1'
     let g:terminal_color_15='#f8f8f8'
   endif
-  hi vimCommentTitle ctermfg=197 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi vimMapModKey ctermfg=178 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi vimMapMod ctermfg=178 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi vimBracket ctermfg=38 ctermbg=NONE guifg=#1faed0 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi vimNotation ctermfg=38 ctermbg=NONE guifg=#1faed0 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi! link vimUserFunc Function
-  hi gitcommitComment ctermfg=102 ctermbg=NONE guifg=#888888 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
-  hi markdownHeadingDelimiter ctermfg=178 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi markdownURL ctermfg=97 ctermbg=NONE guifg=#8c61a6 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi htmlItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
-  hi htmlBold ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-  hi! link javascriptBraces Delimiter
-  hi SyntasticErrorSign ctermfg=167 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi SyntasticWarningSign ctermfg=178 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
   if get(g:, "wwdc17_term_italics", 1)
     hi Comment cterm=italic
     hi Folded cterm=italic
-    hi htmlItalic cterm=italic
-    hi htmlBoldItalic cterm=NONE,bold,italic
-    hi gitcommitComment cterm=italic
   endif
   finish
 endif
@@ -568,27 +550,9 @@ if has('nvim')
   let g:terminal_color_14='#23bce1'
   let g:terminal_color_15='#f8f8f8'
 endif
-hi vimCommentTitle ctermfg=5 ctermbg=NONE guifg=#db2d45 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi vimMapModKey ctermfg=3 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi vimMapMod ctermfg=3 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi vimBracket ctermfg=6 ctermbg=NONE guifg=#1faed0 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi vimNotation ctermfg=6 ctermbg=NONE guifg=#1faed0 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi! link vimUserFunc Function
-hi gitcommitComment ctermfg=8 ctermbg=NONE guifg=#888888 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
-hi markdownHeadingDelimiter ctermfg=3 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi markdownURL ctermfg=12 ctermbg=NONE guifg=#8c61a6 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi htmlItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
-hi htmlBold ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi htmlBoldItalic ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi! link javascriptBraces Delimiter
-hi SyntasticErrorSign ctermfg=1 ctermbg=NONE guifg=#e8503f guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi SyntasticWarningSign ctermfg=3 ctermbg=NONE guifg=#e1ad0b guibg=NONE guisp=NONE cterm=NONE gui=NONE
 if get(g:, "wwdc17_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
-  hi htmlItalic cterm=italic
-  hi htmlBoldItalic cterm=NONE,bold,italic
-  hi gitcommitComment cterm=italic
 endif
 finish
 
@@ -816,18 +780,3 @@ finish
 " CommandMode          magenta           brightwhite       reverse
 " TermCursor        -> Cursor
 " TermCursorNC         brightwhite       black
-" vimCommentTitle      magenta           none
-" vimMapModKey         yellow            none
-" vimMapMod            yellow            none
-" vimBracket           cyan              none
-" vimNotation          cyan              none
-" vimUserFunc       -> Function
-" gitcommitComment     brightblack       none              g=italic
-" markdownHeadingDelimiter yellow        none
-" markdownURL          brightblue        none
-" htmlItalic           fg                none              g=italic
-" htmlBold             fg                none              bold
-" htmlBoldItalic       fg                none              bold
-" javascriptBraces  -> Delimiter
-" SyntasticErrorSign   red               none
-" SyntasticWarningSign yellow            none

@@ -357,42 +357,11 @@ endif
 endverbatim
 # }}}
 
-# Filetype specific highlight groups {{{
-# Vim {{{
-vimCommentTitle      magenta           none
-vimMapModKey         yellow            none
-vimMapMod            yellow            none
-vimBracket           cyan              none
-vimNotation          cyan              none
-vimUserFunc       -> Function
-# }}}
-# Git {{{
-gitcommitComment     brightblack       none              g=italic
-# }}}
-# Markdown {{{
-markdownHeadingDelimiter yellow        none
-markdownURL          brightblue        none
-htmlItalic           fg                none              g=italic
-htmlBold             fg                none              bold
-htmlBoldItalic       fg                none              bold
-# }}}
-# JavaScript {{{
-javascriptBraces  -> Delimiter
-# }}}
-# Syntastic {{{
-SyntasticErrorSign   red               none
-SyntasticWarningSign yellow            none
-# }}}
-# }}}
-
 # Terminal italic {{{
 verbatim
 if get(g:, "@optionprefix_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
-  hi htmlItalic cterm=italic
-  hi htmlBoldItalic cterm=NONE,bold,italic
-  hi gitcommitComment cterm=italic
 endif
 endverbatim
 # }}}
