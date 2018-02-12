@@ -56,18 +56,18 @@ endverbatim
     Folded           brightblack       none              g=italic
     LineNr           brightblack       none
     FoldColumn       brightblack       none
-    Terminal         fg                none
+    Terminal         black             none
 verbatim
 else
 endverbatim
     # Opaque background
-    Normal black brightwhite
+    Normal           black             brightwhite
     CursorLine       none              white
     CursorLineNr     brightred         white
     Folded           brightblack       white             g=italic
     LineNr           brightblack       white
     FoldColumn       brightblack       white
-    Terminal         fg                white
+    Terminal         black             brightwhite
 verbatim
 endif
 endverbatim
