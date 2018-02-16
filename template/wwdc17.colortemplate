@@ -37,9 +37,8 @@ Color: brightcyan           rgb( 35, 188, 225)     ~         14
 Color: brightwhite          rgb(248, 248, 248)     ~         15
 
 verbatim
-let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta',
-    \                   '@guicyan', '@guiwhite', '@guibrightblack', '@guibrightgreen', '@guibrightyellow',
-    \                   '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
+let g:@shortname_palette = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta', '@guicyan', '@guiwhite',
+    \                 '@guibrightblack', '@guibrightred', '@guibrightgreen', '@guibrightyellow', '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
 endverbatim
 # }}}
 
