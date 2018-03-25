@@ -115,7 +115,7 @@ StatusLineNC         black             white             reverse
 TabLine              white             black
 TabLineFill          brightwhite       black
 TabLineSel           brightwhite       black             bold
-VertSplit            black             black
+VertSplit            white             black
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 1
@@ -125,7 +125,7 @@ StatusLineNC         red               white             reverse
 TabLine              white             red
 TabLineFill          brightwhite       red
 TabLineSel           brightwhite       brightred         bold
-VertSplit            red               red
+VertSplit            white             red
 WildMenu             brightwhite       brightgreen       bold
 verbatim
 elseif s:fc == 2
@@ -135,7 +135,7 @@ StatusLineNC         green             blue              reverse
 TabLine              blue              green
 TabLineFill          brightwhite       green
 TabLineSel           brightwhite       green
-VertSplit            green             green
+VertSplit            blue              green
 WildMenu             brightwhite       magenta
 verbatim
 elseif s:fc == 3
@@ -145,27 +145,27 @@ StatusLineNC         yellow            blue              reverse
 TabLine              blue              yellow
 TabLineFill          brightwhite       yellow
 TabLineSel           brightwhite       yellow            bold
-VertSplit            yellow            yellow
+VertSplit            blue              yellow
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 4
 endverbatim
 StatusLine           blue              brightwhite       bold,reverse
-StatusLineNC         blue              brightwhite       reverse
+StatusLineNC         blue              white             reverse
 TabLine              brightwhite       blue
 TabLineFill          brightwhite       blue
 TabLineSel           brightwhite       blue              bold
-VertSplit            blue              blue
+VertSplit            white             blue
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 5
 endverbatim
-StatusLine           magenta           brightwhite       reverse
-StatusLineNC         magenta           yellow            reverse
-TabLine              yellow            magenta
-TabLineFill          brightwhite       magenta
-TabLineSel           brightwhite       magenta
-VertSplit            magenta           magenta
+StatusLine           magenta           brightwhite       bold,reverse
+StatusLineNC         magenta           white             reverse
+TabLine              white             magenta
+TabLineFill          white             magenta
+TabLineSel           brightwhite       magenta           bold
+VertSplit            white             magenta
 WildMenu             brightwhite       yellow
 verbatim
 elseif s:fc == 6
@@ -175,17 +175,17 @@ StatusLineNC         cyan              white             reverse
 TabLine              white             cyan
 TabLineFill          brightwhite       cyan
 TabLineSel           brightwhite       cyan              bold
-VertSplit            cyan              cyan
+VertSplit            white             cyan
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 7
 endverbatim
 StatusLine           white             black             bold,reverse
-StatusLineNC         white             brightwhite       reverse
-TabLine              brightwhite       white
+StatusLineNC         white             brightblack       reverse
+TabLine              brightblack       white
 TabLineFill          black             white
 TabLineSel           black             white             bold
-VertSplit            white             white
+VertSplit            brightblack       white
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 8
@@ -194,8 +194,8 @@ StatusLine           brightblack       brightwhite       bold,reverse
 StatusLineNC         brightblack       white             reverse
 TabLine              white             brightblack
 TabLineFill          brightwhite       brightblack
-TabLineSel           brightwhite       brightblack
-VertSplit            brightblack       brightblack
+TabLineSel           brightwhite       brightblack       bold
+VertSplit            white             brightblack
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 9
@@ -205,17 +205,17 @@ StatusLineNC         brightred         blue              reverse
 TabLine              blue              brightred
 TabLineFill          brightwhite       brightred
 TabLineSel           brightwhite       brightred
-VertSplit            brightred         brightred
+VertSplit            blue              brightred
 WildMenu             brightwhite       brightgreen
 verbatim
 elseif s:fc == 10
 endverbatim
-StatusLine           brightgreen       brightwhite       reverse
-StatusLineNC         brightgreen       brightblack       reverse
-TabLine              brightblack       brightgreen
+StatusLine           brightgreen       brightwhite       bold,reverse
+StatusLineNC         brightgreen       black             reverse
+TabLine              black             brightgreen
 TabLineFill          brightwhite       brightgreen
-TabLineSel           brightwhite       brightgreen
-VertSplit            brightgreen       brightgreen
+TabLineSel           brightwhite       brightgreen       bold
+VertSplit            black             brightgreen
 WildMenu             brightwhite       magenta
 verbatim
 elseif s:fc == 11
@@ -225,7 +225,7 @@ StatusLineNC         brightyellow      blue              reverse
 TabLine              blue              brightyellow
 TabLineFill          brightwhite       brightyellow
 TabLineSel           brightwhite       brightyellow      bold
-VertSplit            brightyellow      brightyellow
+VertSplit            blue              brightyellow
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 12
@@ -235,17 +235,17 @@ StatusLineNC         brightblue        white             reverse
 TabLine              white             brightblue
 TabLineFill          brightwhite       brightblue
 TabLineSel           brightwhite       brightblue        bold
-VertSplit            brightblue        brightblue
+VertSplit            white             brightblue
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 13
 endverbatim
-StatusLine           brightmagenta     brightwhite       reverse
-StatusLineNC         brightmagenta     yellow            reverse
-TabLine              yellow            brightmagenta
-TabLineFill          brightwhite       brightmagenta
-TabLineSel           brightwhite       brightmagenta
-VertSplit            brightmagenta     brightmagenta
+StatusLine           brightmagenta     brightwhite       bold,reverse
+StatusLineNC         brightmagenta     white             reverse
+TabLine              white             brightmagenta
+TabLineFill          white             brightmagenta
+TabLineSel           brightwhite       brightmagenta     bold
+VertSplit            white             brightmagenta
 WildMenu             brightwhite       yellow
 verbatim
 elseif s:fc == 14
@@ -255,18 +255,18 @@ StatusLineNC         brightcyan        white             reverse
 TabLine              white             brightcyan
 TabLineFill          brightwhite       brightcyan
 TabLineSel           brightwhite       brightcyan        bold
-VertSplit            brightcyan        brightcyan
+VertSplit            white             brightcyan
 WildMenu             brightwhite       magenta           bold
 verbatim
 elseif s:fc == 15
 endverbatim
-StatusLine           brightwhite       black             reverse
+StatusLine           brightwhite       black             bold,reverse
 StatusLineNC         brightwhite       brightblack       reverse
 TabLine              brightblack       brightwhite
-TabLineFill          black             brightwhite
-TabLineSel           black             brightwhite
-VertSplit            brightwhite       brightwhite
-WildMenu             brightwhite       magenta
+TabLineFill          brightblack       brightwhite
+TabLineSel           black             brightwhite       bold
+VertSplit            brightblack       brightwhite
+WildMenu             brightwhite       brightblack
 verbatim
 endif
 unlet s:fc
