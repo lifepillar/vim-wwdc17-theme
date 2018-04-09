@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sun Mar 25 12:27:17 2018
+" Last Updated: Mon Apr  9 21:32:39 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'wwdc17_use16', 0) ? 16 : 256))
@@ -23,8 +23,8 @@ let g:colors_name = 'wwdc17'
 
 " 256-color variant
 if !get(g:, 'wwdc17_use16', 0)
-  let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f0f0f0',
-        \                 '#888888', '#e4753e', '#afc06c', '#ebb822', '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
+  let g:terminal_ansi_colors = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f0f0f0',
+        \                         '#888888', '#e4753e', '#afc06c', '#ebb822', '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
 
   " Color similarity table (light background)
   "   brightblack: GUI=#888888/rgb(136,136,136)  Term=102 #878787/rgb(135,135,135)  [delta=0.359050]
@@ -298,8 +298,8 @@ if !get(g:, 'wwdc17_use16', 0)
 endif
 
 " 16-color variant
-let g:wwdc17_palette = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f0f0f0',
-      \                 '#888888', '#e4753e', '#afc06c', '#ebb822', '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
+let g:terminal_ansi_colors = ['#656567', '#e8503f', '#00a995', '#e1ad0b', '#3a5d6f', '#db2d45', '#1faed0', '#f0f0f0',
+      \                         '#888888', '#e4753e', '#afc06c', '#ebb822', '#8c61a6', '#eb314b', '#23bce1', '#f8f8f8']
 
 if !has('gui_running') && get(g:, 'wwdc17_transp_bg', 0)
   hi Normal ctermfg=0 ctermbg=NONE guifg=#656567 guibg=NONE guisp=NONE cterm=NONE gui=NONE

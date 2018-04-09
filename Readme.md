@@ -26,7 +26,7 @@ and put this in your `vimrc`:
    let g:wwdc17_use16 = 1
    ```
 Be aware that, if you set the variable above, but your terminal does not use the
-WWDC17 palette, your colors will be completely off. 
+WWDC17 palette, your colors will be completely off.
 
 
 ## Options
@@ -52,7 +52,7 @@ Put the following options in your `vimrc` to customize the color scheme.
 
         let g:wwdc17_transp_bg = 1
 
-The color palette is available through `g:wwdc17_palette`.
+The color palette is available through `g:terminal_ansi_colors`.
 
 ![WWDC17 Frames](https://raw.github.com/lifepillar/Resources/master/wwdc17/screenshot.png)
 

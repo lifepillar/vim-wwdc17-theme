@@ -19,7 +19,7 @@ insert
 
 .
 
-for col in g:wwdc17_palette
+for col in g:terminal_ansi_colors
   call append('$', col . ' '
         \ . repeat(col == '@guibrightwhite' ? ' ' : '▇', 60)
         \ . ' rgb(' . join(colortemplate#colorspace#hex2rgb(col), ', ')  . ')')
