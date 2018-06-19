@@ -17,16 +17,7 @@ you need:
 WWDC17 also works in MacVim, gVim, etc…: no configuration is needed.
 
 For terminals not supporting true colors, WWDC17 will fall back to use a (pretty
-good) approximate palette based on xterm's 256 colors. If you want exact colors
-in such terminals, you must set your terminal's 16 ANSI color to the WWDC17
-palette (a terminal profile for macOS's Terminal.app is included in the plugin)
-and put this in your `vimrc`:
-
-   ```vim
-   let g:wwdc17_use16 = 1
-   ```
-Be aware that, if you set the variable above, but your terminal does not use the
-WWDC17 palette, your colors will be completely off.
+good) approximate palette based on xterm's 256 colors.
 
 
 ## Options
