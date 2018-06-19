@@ -19,12 +19,4 @@ terminal.
   let g:wwdc17_transp_bg = 0
 <
 
-==============================================================================
-WWDC17 other options			*wwdc17-other-options*
-
-							*g:wwdc17_use16*
-Set to 1 if you want to use 16 colors.
->
-	let g:wwdc17_use16 = 0
-<
 vim:tw=78:ts=8:ft=help:norl:
