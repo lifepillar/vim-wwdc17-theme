@@ -358,7 +358,10 @@ endverbatim
 
 # Terminal italic {{{
 verbatim
-if get(g:, "@optionprefix_term_italics", 1)
+if get(g:, '@optionprefix_no_italics', 0)
+  hi Comment gui=NONE
+  hi Folded gui=NONE
+elseif get(g:, "@optionprefix_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
 endif

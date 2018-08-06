@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Sat Aug  4 17:47:38 2018
+" Last Updated: Mon Aug  6 13:59:24 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -271,7 +271,10 @@ if has('nvim')
   let g:terminal_color_14='#23bce1'
   let g:terminal_color_15='#fafafa'
 endif
-if get(g:, "wwdc17_term_italics", 1)
+if get(g:, 'wwdc17_no_italics', 0)
+  hi Comment gui=NONE
+  hi Folded gui=NONE
+elseif get(g:, "wwdc17_term_italics", 1)
   hi Comment cterm=italic
   hi Folded cterm=italic
 endif
