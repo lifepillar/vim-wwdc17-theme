@@ -214,7 +214,7 @@ StatusLine           brightgreen       brightwhite       bold,reverse
 StatusLineNC         brightgreen       white             reverse
 TabLine              white             brightgreen
 TabLineFill          brightwhite       brightgreen
-TabLineSel           brightwhite       brightgreen       bold
+TabLineSel           brightwhite       brightred         bold
 VertSplit            white             brightgreen
 WildMenu             brightwhite       magenta           bold
 verbatim
