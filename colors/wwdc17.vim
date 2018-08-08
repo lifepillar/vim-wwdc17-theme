@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Wed Aug  8 13:52:26 2018
+" Last Updated: Wed Aug  8 14:04:30 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -160,7 +160,7 @@ elseif s:fc == 10
   hi StatusLineNC ctermfg=143 ctermbg=255 guifg=#abb96e guibg=#f0f0f0 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi TabLine ctermfg=255 ctermbg=143 guifg=#f0f0f0 guibg=#abb96e guisp=NONE cterm=NONE gui=NONE
   hi TabLineFill ctermfg=231 ctermbg=143 guifg=#fafafa guibg=#abb96e guisp=NONE cterm=NONE gui=NONE
-  hi TabLineSel ctermfg=231 ctermbg=172 guifg=#fafafa guibg=#d87900 guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi TabLineSel ctermfg=231 ctermbg=143 guifg=#fafafa guibg=#abb96e guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi VertSplit ctermfg=255 ctermbg=143 guifg=#f0f0f0 guibg=#abb96e guisp=NONE cterm=NONE gui=NONE
   hi WildMenu ctermfg=231 ctermbg=197 guifg=#fafafa guibg=#db2d45 guisp=NONE cterm=NONE,bold gui=NONE,bold
 elseif s:fc == 11
@@ -418,7 +418,7 @@ finish
 " StatusLineNC         brightgreen       white             reverse
 " TabLine              white             brightgreen
 " TabLineFill          brightwhite       brightgreen
-" TabLineSel           brightwhite       brightred         bold
+" TabLineSel           brightwhite       brightgreen       bold
 " VertSplit            white             brightgreen
 " WildMenu             brightwhite       magenta           bold
 " StatusLine           brightyellow      brightwhite       bold,reverse
