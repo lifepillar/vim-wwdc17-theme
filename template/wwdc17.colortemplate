@@ -76,7 +76,7 @@ ColorColumn          none              white
 Conceal              green             none
 Cursor               none              none              reverse
 CursorColumn         none              white
-DiffAdd              brightgreen       fg                reverse
+DiffAdd              brightgreen       black             reverse
 DiffChange           yellow            brightwhite       reverse
 DiffDelete           red               brightwhite       reverse
 DiffText             cyan              brightwhite       bold,reverse
@@ -85,14 +85,14 @@ EndOfBuffer          brightred         none
 ErrorMsg             red               brightwhite       reverse
 IncSearch            brightred         brightwhite       t=reverse g=standout
 MatchParen           none              none              bold,underline s=black
-ModeMsg              fg                none
+ModeMsg              black             none
 MoreMsg              brightred         none
 NonText              brightblack       none
-Pmenu                fg                white
+Pmenu                black             white
 PmenuSbar            brightred         brightblack
 PmenuSel             brightwhite       brightred
 PmenuThumb           red               brightred
-Question             fg                none
+Question             black             none
 QuickFixLine     ->  Search
 Search               brightyellow      brightwhite       reverse
 SignColumn           brightred         none

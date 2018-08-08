@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-wwdc17-theme
 " License:      This file is placed in the public domain
-" Last Updated: Mon Aug  6 14:14:23 2018
+" Last Updated: Wed Aug  8 13:52:26 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -45,7 +45,7 @@ hi ColorColumn ctermfg=NONE ctermbg=255 guifg=NONE guibg=#f0f0f0 guisp=NONE cter
 hi Conceal ctermfg=30 ctermbg=NONE guifg=#00998c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Cursor ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi CursorColumn ctermfg=NONE ctermbg=255 guifg=NONE guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
-hi DiffAdd ctermfg=143 ctermbg=fg guifg=#abb96e guibg=fg guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi DiffAdd ctermfg=143 ctermbg=59 guifg=#abb96e guibg=#5f5f61 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=172 ctermbg=231 guifg=#d87900 guibg=#fafafa guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffDelete ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#fafafa guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffText ctermfg=74 ctermbg=231 guifg=#159ccc guibg=#fafafa guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
@@ -54,14 +54,14 @@ hi EndOfBuffer ctermfg=172 ctermbg=NONE guifg=#d87900 guibg=NONE guisp=NONE cter
 hi ErrorMsg ctermfg=167 ctermbg=231 guifg=#e8503f guibg=#fafafa guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi IncSearch ctermfg=172 ctermbg=231 guifg=#d87900 guibg=#fafafa guisp=NONE cterm=NONE,reverse gui=NONE,standout
 hi MatchParen ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#5f5f61 cterm=NONE,bold,underline gui=NONE,bold,underline
-hi ModeMsg ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi ModeMsg ctermfg=59 ctermbg=NONE guifg=#5f5f61 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi MoreMsg ctermfg=172 ctermbg=NONE guifg=#d87900 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi NonText ctermfg=102 ctermbg=NONE guifg=#888888 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi Pmenu ctermfg=fg ctermbg=255 guifg=fg guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
+hi Pmenu ctermfg=59 ctermbg=255 guifg=#5f5f61 guibg=#f0f0f0 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSbar ctermfg=172 ctermbg=102 guifg=#d87900 guibg=#888888 guisp=NONE cterm=NONE gui=NONE
 hi PmenuSel ctermfg=231 ctermbg=172 guifg=#fafafa guibg=#d87900 guisp=NONE cterm=NONE gui=NONE
 hi PmenuThumb ctermfg=167 ctermbg=172 guifg=#e8503f guibg=#d87900 guisp=NONE cterm=NONE gui=NONE
-hi Question ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi Question ctermfg=59 ctermbg=NONE guifg=#5f5f61 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link QuickFixLine Search
 hi Search ctermfg=178 ctermbg=231 guifg=#e1ad0b guibg=#fafafa guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi SignColumn ctermfg=172 ctermbg=NONE guifg=#d87900 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -315,7 +315,7 @@ finish
 " Conceal              green             none
 " Cursor               none              none              reverse
 " CursorColumn         none              white
-" DiffAdd              brightgreen       fg                reverse
+" DiffAdd              brightgreen       black             reverse
 " DiffChange           yellow            brightwhite       reverse
 " DiffDelete           red               brightwhite       reverse
 " DiffText             cyan              brightwhite       bold,reverse
@@ -324,14 +324,14 @@ finish
 " ErrorMsg             red               brightwhite       reverse
 " IncSearch            brightred         brightwhite       t=reverse g=standout
 " MatchParen           none              none              bold,underline s=black
-" ModeMsg              fg                none
+" ModeMsg              black             none
 " MoreMsg              brightred         none
 " NonText              brightblack       none
-" Pmenu                fg                white
+" Pmenu                black             white
 " PmenuSbar            brightred         brightblack
 " PmenuSel             brightwhite       brightred
 " PmenuThumb           red               brightred
-" Question             fg                none
+" Question             black             none
 " QuickFixLine     ->  Search
 " Search               brightyellow      brightwhite       reverse
 " SignColumn           brightred         none
