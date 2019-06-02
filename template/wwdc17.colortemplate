@@ -1,16 +1,13 @@
 # vim: ft=colortemplate fdm=marker
 
 # Information {{{
-# Mandatory
 Full name:   WWDC17
 Short name:  wwdc17
 Author:      Lifepillar <lifepillar@lifepillar.me>
-Maintainer:  Lifepillar <lifepillar@lifepillar.me>
-# Optional
 Website:     https://github.com/lifepillar/vim-wwdc17-theme
 Description: Colorful light color scheme for Vim inspired by Apple's WWDC17 page
 License:     This file is placed in the public domain
-Terminal Colors: 256
+Neovim:      yes
 # }}}
 
 # Documentation {{{
@@ -18,41 +15,59 @@ Include: _help.colortemplate
 # }}}
 
 # Color palette {{{
-# Color name                GUI                  Base256    Base16 (optional)
-Color: black                rgb( 95,  95,  97)     ~         0
-Color: red                  rgb(232,  80,  63)     167       1
-Color: green                rgb(  0, 153, 140)     ~         2
-Color: yellow               rgb(216, 121,   0)     ~         3
-Color: blue                 rgb( 82, 127, 143)     ~         4
-Color: magenta              rgb(219,  45,  69)     ~         5
-Color: cyan                 rgb( 21, 156, 204)     ~         6
-Color: white                rgb(240, 240, 240)     ~         7
-Color: brightblack          rgb(136, 136, 136)     ~         8
-Color: brightred            rgb(216, 121,   0)     ~         9
-Color: brightgreen          rgb(171, 185, 110)     ~         10
-Color: brightyellow         rgb(225, 173,  11)     ~         11
-Color: brightblue           rgb(140,  97, 166)     ~         12
-Color: brightmagenta        rgb(235,  49,  75)     ~         13
-Color: brightcyan           rgb( 35, 188, 225)     ~         14
-Color: brightwhite          rgb(250, 250, 250)     ~         15
+# Color name         GUI                    Base256      Base16
+Color: black         rgb( 95,  95,  97)     59           Black
+Color: red           rgb(232,  80,  63)     167          DarkRed
+Color: green         rgb(  0, 153, 140)     30           DarkGreen
+Color: yellow        rgb(216, 121,   0)     172          DarkYellow
+Color: blue          rgb( 82, 127, 143)     66           DarkBlue
+Color: magenta       rgb(219,  45,  69)     197          DarkMagenta
+Color: cyan          rgb( 21, 156, 204)     74           DarkCyan
+Color: white         rgb(240, 240, 240)     255          Gray
+Color: brightblack   rgb(136, 136, 136)     102          DarkGray
+Color: brightred     rgb(216, 121,   0)     172          Red
+Color: brightgreen   rgb(171, 185, 110)     143          Green
+Color: brightyellow  rgb(225, 173,  11)     178          Yellow
+Color: brightblue    rgb(140,  97, 166)     97           Blue
+Color: brightmagenta rgb(235,  49,  75)     197          Magenta
+Color: brightcyan    rgb( 35, 188, 225)     38           Cyan
+Color: brightwhite   rgb(250, 250, 250)     231          White
+# }}}
 
-verbatim
-let g:terminal_ansi_colors = ['@guiblack', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta', '@guicyan', '@guiwhite',
-    \                         '@guibrightblack', '@guibrightred', '@guibrightgreen', '@guibrightyellow', '@guibrightblue', '@guibrightmagenta', '@guibrightcyan', '@guibrightwhite']
-endverbatim
+# Terminal colors {{{
+Term Colors: black red green yellow blue magenta cyan white
+Term Colors: brightblack brightred brightgreen brightyellow
+Term Colors: brightblue brightmagenta brightcyan brightwhite
+# }}}
+
+# Common linked groups {{{
+QuickFixLine      -> Search
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+Conditional       -> Statement
+Define            -> PreProc
+Exception         -> Statement
+Macro             -> PreProc
+PreCondit         -> PreProc
+Repeat            -> Statement
+Tag               -> Special
+Typedef           -> Type
+lCursor           -> Cursor
 # }}}
 
 Background: light
 
 # Default highlight groups {{{
+Variant: 256 8
+
 verbatim
-if !has('gui_running') && get(g:, '@optionprefix_transp_bg', 0)
+if get(g:, '@optionprefix_transp_bg', 0)
 endverbatim
     # Transparent background
     Normal           black             none
     CursorLine       none              none
     CursorLineNr     brightred         none
-    Folded           brightblack       none              g=italic
+    Folded           brightblack       none              italic
     LineNr           brightblack       none
     FoldColumn       brightblack       none
     Terminal         black             none
@@ -63,7 +78,7 @@ endverbatim
     Normal           black             brightwhite
     CursorLine       none              white
     CursorLineNr     brightred         white
-    Folded           brightblack       white             g=italic
+    Folded           brightblack       white             italic
     LineNr           brightblack       white
     FoldColumn       brightblack       white
     Terminal         black             brightwhite
@@ -71,7 +86,18 @@ verbatim
 endif
 endverbatim
 
-# Group              Foreground        Background        Attributes
+Variant: gui
+
+Normal               black             brightwhite
+CursorLine           none              white
+CursorLineNr         brightred         white
+Folded               brightblack       white             italic
+LineNr               brightblack       white
+FoldColumn           brightblack       white
+Terminal             black             brightwhite
+
+Variant: gui 256 8
+
 ColorColumn          none              white
 Conceal              green             none
 Cursor               none              none              reverse
@@ -93,7 +119,6 @@ PmenuSbar            brightred         brightblack
 PmenuSel             brightwhite       brightred
 PmenuThumb           red               brightred
 Question             black             none
-QuickFixLine     ->  Search
 Search               brightyellow      brightwhite       reverse
 SignColumn           brightred         none
 SpecialKey           brightred         none
@@ -272,20 +297,14 @@ endif
 unlet s:fc
 endverbatim
 
-StatusLineTerm    -> StatusLine
-StatusLineTermNC  -> StatusLineNC
-
 # Other conventional group names (see `:help group-name`)
 Boolean              brightgreen       none
 Character            magenta           none
-Comment              brightblack       none              g=italic
-Conditional       -> Statement
+Comment              brightblack       none              italic
 Constant             green             none
-Define            -> PreProc
 Debug                magenta           none
 Delimiter            blue              none
 Error                red               brightwhite       reverse
-Exception         -> Statement
 Float                brightgreen       none
 Function             green             none
 Identifier           blue              none
@@ -293,12 +312,9 @@ Ignore               brightwhite       none
 Include              brightblue        none
 Keyword              cyan              none
 Label                green             none
-Macro             -> PreProc
 Number               green             none
 Operator             cyan              none
-PreCondit         -> PreProc
 PreProc              red               none
-Repeat            -> Statement
 Special              red               none
 SpecialChar          magenta           none
 SpecialComment       magenta           none
@@ -306,13 +322,9 @@ Statement            cyan              none
 StorageClass         cyan              none
 String               brightred         none
 Structure            red               none
-Tag               -> Special
 Todo                 magenta           none              bold
 Type                 brightblue        none
-Typedef           -> Type
 Underlined           none              none              underline
-# See `:help lCursor`
-lCursor           -> Cursor
 # See `:help CursorIM`
 CursorIM             none              brightwhite
 # See `:help window-toolbar`
@@ -330,44 +342,17 @@ CommandMode          magenta           brightwhite       reverse
 # }}}
 
 # NeoVim {{{
-verbatim
-if has('nvim')
-endverbatim
 TermCursor        -> Cursor
 TermCursorNC         brightwhite       black
-verbatim
-let g:terminal_color_0='@guiblack'
-let g:terminal_color_1='@guired'
-let g:terminal_color_2='@guigreen'
-let g:terminal_color_3='@guiyellow'
-let g:terminal_color_4='@guiblue'
-let g:terminal_color_5='@guimagenta'
-let g:terminal_color_6='@guicyan'
-let g:terminal_color_7='@guiwhite'
-let g:terminal_color_8='@guibrightblack'
-let g:terminal_color_9='@guibrightred'
-let g:terminal_color_10='@guibrightgreen'
-let g:terminal_color_11='@guibrightyellow'
-let g:terminal_color_12='@guibrightblue'
-let g:terminal_color_13='@guibrightmagenta'
-let g:terminal_color_14='@guibrightcyan'
-let g:terminal_color_15='@guibrightwhite'
-endif
-endverbatim
 # }}}
 
-# Terminal italic {{{
-verbatim
-if get(g:, '@optionprefix_no_italics', 0)
-  hi Comment gui=NONE
-  hi Folded gui=NONE
-elseif get(g:, "@optionprefix_term_italics", 1)
-  hi Comment cterm=italic
-  hi Folded cterm=italic
-endif
-endverbatim
+# B&W Variant {{{
+Include: _bw.colortemplate
 # }}}
+
+Variant: gui
 
 # Demo :) {{{
 Include: _demo.colortemplate
 # }}}
+

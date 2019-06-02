@@ -2,6 +2,9 @@
 
 auxfile demo.vim
 " Source me :)
+if !exists('g:terminal_ansi_colors')
+  finish
+endif
 colorscheme wwdc17
 silent tabnew
 insert
@@ -37,22 +40,22 @@ for i in range(13,13+14)
 endfor
 syn match WWDC17Demo0 /\%28l.*/
 
-hi WWDC17Demo0 ctermfg=@black ctermbg=NONE guifg=@black guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo1 ctermfg=@red ctermbg=NONE guifg=@red guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo2 ctermfg=@green ctermbg=NONE guifg=@green guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo3 ctermfg=@yellow ctermbg=NONE guifg=@yellow guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo4 ctermfg=@blue ctermbg=NONE guifg=@blue guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo5 ctermfg=@magenta ctermbg=NONE guifg=@magenta guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo6 ctermfg=@cyan ctermbg=NONE guifg=@cyan guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo7 ctermfg=@white ctermbg=NONE guifg=@white guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo8 ctermfg=@brightblack ctermbg=NONE guifg=@brightblack guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo9 ctermfg=@brightred ctermbg=NONE guifg=@brightred guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo10 ctermfg=@brightgreen ctermbg=NONE guifg=@brightgreen guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo11 ctermfg=@brightyellow ctermbg=NONE guifg=@brightyellow guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo12 ctermfg=@brightblue ctermbg=NONE guifg=@brightblue guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo13 ctermfg=@brightmagenta ctermbg=NONE guifg=@brightmagenta guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo14 ctermfg=@brightcyan ctermbg=NONE guifg=@brightcyan guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo15 ctermfg=@brightwhite ctermbg=NONE guifg=@brightwhite guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi WWDC17Demo16 ctermfg=@blue ctermbg=NONE guifg=@blue guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo0  guifg=@black         guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo1  guifg=@red           guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo2  guifg=@green         guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo3  guifg=@yellow        guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo4  guifg=@blue          guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo5  guifg=@magenta       guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo6  guifg=@cyan          guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo7  guifg=@white         guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo8  guifg=@brightblack   guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo9  guifg=@brightred     guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo10 guifg=@brightgreen   guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo11 guifg=@brightyellow  guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo12 guifg=@brightblue    guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo13 guifg=@brightmagenta guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo14 guifg=@brightcyan    guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo15 guifg=@brightwhite   guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi WWDC17Demo16 guifg=@blue          guibg=NONE guisp=NONE cterm=NONE gui=NONE
 endauxfile
 

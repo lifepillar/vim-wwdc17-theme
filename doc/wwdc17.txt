@@ -1,5 +1,16 @@
+*wwdc17.txt*	For Vim version 8.1	Last change: 2019 Jun 02
+
+
+		  WWDC17 color scheme    by Lifepillar
+
+WWDC17 is a colorful colorscheme inspired by the colors of Apple's WWDC17
+event. Apart from the fact that I shamelessly copied some color codes from the
+CSS of their web page (and changed some of them), this color scheme has
+nothing to do with Apple, so it may be safely used by Linux users as well
+(FreeBSD users won't have any problems, I guess).
+
 ==============================================================================
-WWDC17 colorscheme			*wwdc17-colorscheme*
+Colorscheme options					*wwdc17-options*
 
 						*g:wwdc17_frame_color*
 A number between 0 and 15 specifying the color for the status line, the tab
@@ -7,21 +18,11 @@ line, and the vertical splits.
 >
 	let g:wwdc17_frame_color = 10
 <
-						*g:wwdc17_no_italics*
-Set to 1 if you want to disable italics everywhere in terminal and GUI Vim.
->
-	let g:wwdc17_no_italics = 0
-<
-						*g:wwdc17_term_italics*
-Set to 0 if you want to disable italics in the terminal.
->
-	let g:wwdc17_term_italics = 1
-<
 						*g:wwdc17_transp_bg*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
 	let g:wwdc17_transp_bg = 0
 <
+ vim:tw=78:ts=8:noet:ft=help:norl:
 
-vim:tw=78:ts=8:ft=help:norl:

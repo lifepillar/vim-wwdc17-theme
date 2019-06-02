@@ -1,5 +1,4 @@
 g:wwdc17_frame_color	wwdc17.txt	/*g:wwdc17_frame_color*
-g:wwdc17_no_italics	wwdc17.txt	/*g:wwdc17_no_italics*
-g:wwdc17_term_italics	wwdc17.txt	/*g:wwdc17_term_italics*
 g:wwdc17_transp_bg	wwdc17.txt	/*g:wwdc17_transp_bg*
-wwdc17-colorscheme	wwdc17.txt	/*wwdc17-colorscheme*
+wwdc17-options	wwdc17.txt	/*wwdc17-options*
+wwdc17.txt	wwdc17.txt	/*wwdc17.txt*
