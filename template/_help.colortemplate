@@ -1,5 +1,3 @@
-# vim: ft=colortemplate fdm=marker ts=8
-
 # Documentation {{{
 documentation
 *@shortname.txt*	For Vim version @vimversion	Last change: @date
@@ -32,3 +30,6 @@ terminal.
 
 enddocumentation
 # }}}
+
+# vim: ft=colortemplate fdm=marker ts=8
+
