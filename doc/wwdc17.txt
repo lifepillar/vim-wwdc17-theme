@@ -1,4 +1,4 @@
-*wwdc17.txt*	For Vim version 8.1	Last change: 2019 Jun 02
+*wwdc17.txt*	For Vim version 8.1	Last change: 2019 Jun 03
 
 
 		  WWDC17 color scheme    by Lifepillar
@@ -10,7 +10,7 @@ nothing to do with Apple, so it may be safely used by Linux users as well
 (FreeBSD users won't have any problems, I guess).
 
 ==============================================================================
-Colorscheme options					*wwdc17-options*
+Colorscheme options				*wwdc17-options*
 
 						*g:wwdc17_frame_color*
 A number between 0 and 15 specifying the color for the status line, the tab

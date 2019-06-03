@@ -12,7 +12,7 @@ nothing to do with Apple, so it may be safely used by Linux users as well
 (FreeBSD users won't have any problems, I guess).
 
 ==============================================================================
-Colorscheme options					*@shortname-options*
+Colorscheme options				*@shortname-options*
 
 						*g:@optionprefix_frame_color*
 A number between 0 and 15 specifying the color for the status line, the tab

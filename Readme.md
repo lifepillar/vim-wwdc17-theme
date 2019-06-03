@@ -17,7 +17,9 @@ you need:
 WWDC17 also works in MacVim, gVim, etc…: no configuration is needed.
 
 For terminals not supporting true colors, WWDC17 will fall back to use a (pretty
-good) approximate palette based on xterm's 256 colors.
+good) approximate palette based on xterm's 256 colors. And if you happen to
+stumble upon an old vt100 terminal emulator, well, WWDC17 will fall back to
+black&white at the blink of an eye!
 
 
 ## Options
@@ -45,8 +47,7 @@ The color palette is available through `g:terminal_ansi_colors`.
 
 Do you want to hack the theme? Install the
 [Colortemplate](https://github.com/lifepillar/vim-colortemplate) ftplugin and
-modify `wwdc17.colortemplate`, then rebuild the colorscheme with the
-`:Colortemplate` command.
+modify `wwdc17.colortemplate`, then rebuild the colorscheme.
 
 If you extend or improve WWDC17, please consider submitting a pull request!
 
