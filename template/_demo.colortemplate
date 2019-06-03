@@ -1,5 +1,3 @@
-# vim: ft=colortemplate fdm=marker
-
 auxfile demo.vim
 " Source me :)
 if !exists('g:terminal_ansi_colors')
@@ -58,4 +56,6 @@ hi WWDC17Demo14 guifg=@brightcyan    guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi WWDC17Demo15 guifg=@brightwhite   guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi WWDC17Demo16 guifg=@blue          guibg=NONE guisp=NONE cterm=NONE gui=NONE
 endauxfile
+
+# vim: ft=colortemplate fdm=marker
 
