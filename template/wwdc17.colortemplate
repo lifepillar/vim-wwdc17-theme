@@ -333,7 +333,6 @@ ToolbarButton        black             white             bold
 # }}}
 
 # Additional highlight groups {{{
-# Add additional highlight groups here if you want
 NormalMode           brightblack       brightwhite       reverse
 InsertMode           brightgreen       brightwhite       reverse
 ReplaceMode          brightred         brightwhite       reverse
