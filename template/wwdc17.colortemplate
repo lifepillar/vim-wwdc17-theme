@@ -60,31 +60,25 @@ Background: light
 # Default highlight groups {{{
 Variant: 256 8
 
-verbatim
-if get(g:, '@optionprefix_transp_bg', 0)
-endverbatim
-    # Transparent background
-    Normal           black             none
-    CursorLine       none              none
-    CursorLineNr     brightred         none
-    Folded           brightblack       none              italic
-    LineNr           brightblack       none
-    FoldColumn       brightblack       none
-    Terminal         black             none
-verbatim
-else
-endverbatim
-    # Opaque background
-    Normal           black             brightwhite
-    CursorLine       none              white
-    CursorLineNr     brightred         white
-    Folded           brightblack       white             italic
-    LineNr           brightblack       white
-    FoldColumn       brightblack       white
-    Terminal         black             brightwhite
-verbatim
-endif
-endverbatim
+#if get(g:, '@optionprefix_transp_bg', 0)
+  # Transparent background
+  Normal           black             none
+  CursorLine       none              none
+  CursorLineNr     brightred         none
+  Folded           brightblack       none              italic
+  LineNr           brightblack       none
+  FoldColumn       brightblack       none
+  Terminal         black             none
+#else
+  # Opaque background
+  Normal           black             brightwhite
+  CursorLine       none              white
+  CursorLineNr     brightred         white
+  Folded           brightblack       white             italic
+  LineNr           brightblack       white
+  FoldColumn       brightblack       white
+  Terminal         black             brightwhite
+#endif
 
 Variant: gui
 
@@ -133,167 +127,139 @@ WarningMsg           red               none
 
 verbatim
 let s:fc = abs(get(g:, '@optionprefix_frame_color', 10)) % 16
-if s:fc == 0
 endverbatim
-StatusLine           black             brightwhite       bold,reverse
-StatusLineNC         black             white             reverse
-TabLine              white             black
-TabLineFill          brightwhite       black
-TabLineSel           brightwhite       black             bold
-VertSplit            white             black
-WildMenu             brightwhite       magenta           bold
+
+#if s:fc == 0
+  StatusLine           black             brightwhite       bold,reverse
+  StatusLineNC         black             white             reverse
+  TabLine              white             black
+  TabLineFill          brightwhite       black
+  TabLineSel           brightwhite       black             bold
+  VertSplit            white             black
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 1
+  StatusLine           red               brightwhite       bold,reverse
+  StatusLineNC         red               white             reverse
+  TabLine              white             red
+  TabLineFill          brightwhite       red
+  TabLineSel           brightwhite       brightred         bold
+  VertSplit            white             red
+  WildMenu             brightwhite       brightgreen       bold
+#elseif s:fc == 2
+  StatusLine           green             brightwhite       bold,reverse
+  StatusLineNC         green             white             reverse
+  TabLine              white             green
+  TabLineFill          brightwhite       green
+  TabLineSel           brightwhite       green             bold
+  VertSplit            white             green
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 3
+  StatusLine           yellow            brightwhite       bold,reverse
+  StatusLineNC         yellow            white             reverse
+  TabLine              white             yellow
+  TabLineFill          brightwhite       yellow
+  TabLineSel           brightwhite       yellow            bold
+  VertSplit            white             yellow
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 4
+  StatusLine           blue              brightwhite       bold,reverse
+  StatusLineNC         blue              white             reverse
+  TabLine              brightwhite       blue
+  TabLineFill          brightwhite       blue
+  TabLineSel           brightwhite       blue              bold
+  VertSplit            white             blue
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 5
+  StatusLine           magenta           brightwhite       bold,reverse
+  StatusLineNC         magenta           white             reverse
+  TabLine              white             magenta
+  TabLineFill          white             magenta
+  TabLineSel           brightwhite       magenta           bold
+  VertSplit            white             magenta
+  WildMenu             brightwhite       yellow
+#elseif s:fc == 6
+  StatusLine           cyan              brightwhite       bold,reverse
+  StatusLineNC         cyan              white             reverse
+  TabLine              white             cyan
+  TabLineFill          brightwhite       cyan
+  TabLineSel           brightwhite       cyan              bold
+  VertSplit            white             cyan
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 7
+  StatusLine           white             black             bold,reverse
+  StatusLineNC         white             brightblack       reverse
+  TabLine              brightblack       white
+  TabLineFill          black             white
+  TabLineSel           black             white             bold
+  VertSplit            brightblack       white
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 8
+  StatusLine           brightblack       brightwhite       bold,reverse
+  StatusLineNC         brightblack       white             reverse
+  TabLine              white             brightblack
+  TabLineFill          brightwhite       brightblack
+  TabLineSel           brightwhite       brightblack       bold
+  VertSplit            white             brightblack
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 9
+  StatusLine           brightred         brightwhite       bold,reverse
+  StatusLineNC         brightred         white             reverse
+  TabLine              white             brightred
+  TabLineFill          brightwhite       brightred
+  TabLineSel           brightwhite       brightred         bold
+  VertSplit            white             brightred
+  WildMenu             brightwhite       brightgreen       bold
+#elseif s:fc == 10
+  StatusLine           brightgreen       brightwhite       bold,reverse
+  StatusLineNC         brightgreen       white             reverse
+  TabLine              white             brightgreen
+  TabLineFill          brightwhite       brightgreen
+  TabLineSel           brightwhite       brightgreen       bold
+  VertSplit            white             brightgreen
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 11
+  StatusLine           brightyellow      brightwhite       bold,reverse
+  StatusLineNC         brightyellow      white             reverse
+  TabLine              white             brightyellow
+  TabLineFill          brightwhite       brightyellow
+  TabLineSel           brightwhite       brightyellow      bold
+  VertSplit            white             brightyellow
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 12
+  StatusLine           brightblue        brightwhite       bold,reverse
+  StatusLineNC         brightblue        white             reverse
+  TabLine              white             brightblue
+  TabLineFill          brightwhite       brightblue
+  TabLineSel           brightwhite       brightblue        bold
+  VertSplit            white             brightblue
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 13
+  StatusLine           brightmagenta     brightwhite       bold,reverse
+  StatusLineNC         brightmagenta     white             reverse
+  TabLine              white             brightmagenta
+  TabLineFill          white             brightmagenta
+  TabLineSel           brightwhite       brightmagenta     bold
+  VertSplit            white             brightmagenta
+  WildMenu             brightwhite       yellow
+#elseif s:fc == 14
+  StatusLine           brightcyan        brightwhite       bold,reverse
+  StatusLineNC         brightcyan        white             reverse
+  TabLine              white             brightcyan
+  TabLineFill          brightwhite       brightcyan
+  TabLineSel           brightwhite       brightcyan        bold
+  VertSplit            white             brightcyan
+  WildMenu             brightwhite       magenta           bold
+#elseif s:fc == 15
+  StatusLine           brightwhite       black             bold,reverse
+  StatusLineNC         brightwhite       brightblack       reverse
+  TabLine              brightblack       brightwhite
+  TabLineFill          brightblack       brightwhite
+  TabLineSel           black             brightwhite       bold
+  VertSplit            brightblack       brightwhite
+  WildMenu             brightwhite       brightblack
+#endif
+
 verbatim
-elseif s:fc == 1
-endverbatim
-StatusLine           red               brightwhite       bold,reverse
-StatusLineNC         red               white             reverse
-TabLine              white             red
-TabLineFill          brightwhite       red
-TabLineSel           brightwhite       brightred         bold
-VertSplit            white             red
-WildMenu             brightwhite       brightgreen       bold
-verbatim
-elseif s:fc == 2
-endverbatim
-StatusLine           green             brightwhite       bold,reverse
-StatusLineNC         green             white             reverse
-TabLine              white             green
-TabLineFill          brightwhite       green
-TabLineSel           brightwhite       green             bold
-VertSplit            white             green
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 3
-endverbatim
-StatusLine           yellow            brightwhite       bold,reverse
-StatusLineNC         yellow            white             reverse
-TabLine              white             yellow
-TabLineFill          brightwhite       yellow
-TabLineSel           brightwhite       yellow            bold
-VertSplit            white             yellow
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 4
-endverbatim
-StatusLine           blue              brightwhite       bold,reverse
-StatusLineNC         blue              white             reverse
-TabLine              brightwhite       blue
-TabLineFill          brightwhite       blue
-TabLineSel           brightwhite       blue              bold
-VertSplit            white             blue
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 5
-endverbatim
-StatusLine           magenta           brightwhite       bold,reverse
-StatusLineNC         magenta           white             reverse
-TabLine              white             magenta
-TabLineFill          white             magenta
-TabLineSel           brightwhite       magenta           bold
-VertSplit            white             magenta
-WildMenu             brightwhite       yellow
-verbatim
-elseif s:fc == 6
-endverbatim
-StatusLine           cyan              brightwhite       bold,reverse
-StatusLineNC         cyan              white             reverse
-TabLine              white             cyan
-TabLineFill          brightwhite       cyan
-TabLineSel           brightwhite       cyan              bold
-VertSplit            white             cyan
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 7
-endverbatim
-StatusLine           white             black             bold,reverse
-StatusLineNC         white             brightblack       reverse
-TabLine              brightblack       white
-TabLineFill          black             white
-TabLineSel           black             white             bold
-VertSplit            brightblack       white
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 8
-endverbatim
-StatusLine           brightblack       brightwhite       bold,reverse
-StatusLineNC         brightblack       white             reverse
-TabLine              white             brightblack
-TabLineFill          brightwhite       brightblack
-TabLineSel           brightwhite       brightblack       bold
-VertSplit            white             brightblack
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 9
-endverbatim
-StatusLine           brightred         brightwhite       bold,reverse
-StatusLineNC         brightred         white             reverse
-TabLine              white             brightred
-TabLineFill          brightwhite       brightred
-TabLineSel           brightwhite       brightred         bold
-VertSplit            white             brightred
-WildMenu             brightwhite       brightgreen       bold
-verbatim
-elseif s:fc == 10
-endverbatim
-StatusLine           brightgreen       brightwhite       bold,reverse
-StatusLineNC         brightgreen       white             reverse
-TabLine              white             brightgreen
-TabLineFill          brightwhite       brightgreen
-TabLineSel           brightwhite       brightgreen       bold
-VertSplit            white             brightgreen
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 11
-endverbatim
-StatusLine           brightyellow      brightwhite       bold,reverse
-StatusLineNC         brightyellow      white             reverse
-TabLine              white             brightyellow
-TabLineFill          brightwhite       brightyellow
-TabLineSel           brightwhite       brightyellow      bold
-VertSplit            white             brightyellow
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 12
-endverbatim
-StatusLine           brightblue        brightwhite       bold,reverse
-StatusLineNC         brightblue        white             reverse
-TabLine              white             brightblue
-TabLineFill          brightwhite       brightblue
-TabLineSel           brightwhite       brightblue        bold
-VertSplit            white             brightblue
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 13
-endverbatim
-StatusLine           brightmagenta     brightwhite       bold,reverse
-StatusLineNC         brightmagenta     white             reverse
-TabLine              white             brightmagenta
-TabLineFill          white             brightmagenta
-TabLineSel           brightwhite       brightmagenta     bold
-VertSplit            white             brightmagenta
-WildMenu             brightwhite       yellow
-verbatim
-elseif s:fc == 14
-endverbatim
-StatusLine           brightcyan        brightwhite       bold,reverse
-StatusLineNC         brightcyan        white             reverse
-TabLine              white             brightcyan
-TabLineFill          brightwhite       brightcyan
-TabLineSel           brightwhite       brightcyan        bold
-VertSplit            white             brightcyan
-WildMenu             brightwhite       magenta           bold
-verbatim
-elseif s:fc == 15
-endverbatim
-StatusLine           brightwhite       black             bold,reverse
-StatusLineNC         brightwhite       brightblack       reverse
-TabLine              brightblack       brightwhite
-TabLineFill          brightblack       brightwhite
-TabLineSel           black             brightwhite       bold
-VertSplit            brightblack       brightwhite
-WildMenu             brightwhite       brightblack
-verbatim
-endif
 unlet s:fc
 endverbatim
 
