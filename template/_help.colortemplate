@@ -3,7 +3,7 @@ documentation
 *@shortname.txt*	For Vim version @vimversion	Last change: @date
 
 
-		  @fullname color scheme    by @author
+		@fullname color scheme    by @author
 
 WWDC17 is a colorful colorscheme inspired by the colors of Apple's WWDC17
 event. Apart from the fact that I shamelessly copied some color codes from the
@@ -31,5 +31,5 @@ terminal.
 enddocumentation
 # }}}
 
-# vim: ft=colortemplate fdm=marker ts=8
+# vim: ft=colortemplate fdm=marker ts=8 tw=78
 
