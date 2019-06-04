@@ -125,9 +125,7 @@ Visual               blue              brightwhite       reverse
 VisualNOS            brightwhite       blue
 WarningMsg           red               none
 
-verbatim
-let s:fc = abs(get(g:, '@optionprefix_frame_color', 10)) % 16
-endverbatim
+#let s:fc = abs(get(g:, '@optionprefix_frame_color', 10)) % 16
 
 #if s:fc == 0
   StatusLine           black             brightwhite       bold,reverse
@@ -259,9 +257,7 @@ endverbatim
   WildMenu             brightwhite       brightblack
 #endif
 
-verbatim
-unlet s:fc
-endverbatim
+#unlet s:fc
 
 # Other conventional group names (see `:help group-name`)
 Boolean              brightgreen       none
