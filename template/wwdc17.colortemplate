@@ -64,7 +64,7 @@ Variant: 256 8
 #if get(g:, '@optionprefix_transp_bg', 0)
 Variant: gui 256 8
   Normal           black             none
-  CursorLine       none              none
+  CursorLine       none              none              underline
   CursorLineNr     brightred         none
   Folded           brightblack       none              italic
   LineNr           brightblack       none
