@@ -58,10 +58,11 @@ lCursor           -> Cursor
 Background: light
 
 # Default highlight groups {{{
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
 Variant: 256 8
-
 #if get(g:, '@optionprefix_transp_bg', 0)
-  # Transparent background
+Variant: gui 256 8
   Normal           black             none
   CursorLine       none              none
   CursorLineNr     brightred         none
@@ -70,7 +71,6 @@ Variant: 256 8
   FoldColumn       brightblack       none
   Terminal         black             none
 #else
-  # Opaque background
   Normal           black             brightwhite
   CursorLine       none              white
   CursorLineNr     brightred         white
@@ -79,18 +79,6 @@ Variant: 256 8
   FoldColumn       brightblack       white
   Terminal         black             brightwhite
 #endif
-
-Variant: gui
-
-Normal               black             brightwhite
-CursorLine           none              white
-CursorLineNr         brightred         white
-Folded               brightblack       white             italic
-LineNr               brightblack       white
-FoldColumn           brightblack       white
-Terminal             black             brightwhite
-
-Variant: gui 256 8
 
 ColorColumn          none              white
 Conceal              green             none
