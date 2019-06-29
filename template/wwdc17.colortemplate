@@ -258,7 +258,7 @@ Error                red               brightwhite       reverse
 Float                brightgreen       none
 Function             green             none
 Identifier           blue              none
-Ignore               brightwhite       none
+Ignore               yellow            none
 Include              brightblue        none
 Keyword              cyan              none
 Label                green             none
