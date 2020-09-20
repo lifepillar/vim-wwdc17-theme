@@ -57,5 +57,5 @@ hi WWDC17Demo15 guifg=@brightwhite   guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi WWDC17Demo16 guifg=@blue          guibg=NONE guisp=NONE cterm=NONE gui=NONE
 endauxfile
 
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 
