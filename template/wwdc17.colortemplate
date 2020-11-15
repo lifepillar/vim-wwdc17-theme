@@ -6,7 +6,7 @@ Short name:  wwdc17
 Author:      Lifepillar <lifepillar@lifepillar.me>
 Website:     https://github.com/lifepillar/vim-wwdc17-theme
 Description: Colorful light color scheme for Vim inspired by Apple's WWDC17 page
-License:     This file is placed in the public domain
+License:     MIT
 Neovim:      yes
 ; }}}
 
