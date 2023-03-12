@@ -1,43 +1,42 @@
 ; vim: ft=colortemplate fdm=marker
 
-; Information {{{
 Full name:   WWDC17
 Short name:  wwdc17
 Author:      Lifepillar <lifepillar@lifepillar.me>
-Website:     https://github.com/lifepillar/vim-wwdc17-theme
+URL:         https://github.com/lifepillar/vim-wwdc17-theme
 Description: Colorful light color scheme for Vim inspired by Apple's WWDC17 page
 License:     MIT
-Neovim:      yes
-; }}}
+
+Variants:    gui 256 8 0
+Background:  light
 
 ; Documentation {{{
-Include: _help.colortemplate
+; Include: _help.colortemplate
 ; }}}
 
 ; Color palette {{{
-; Color name         GUI                    Base256      Base16
-Color: black         rgb( 95,  95,  97)     59           Black
-Color: red           rgb(232,  80,  63)     167          DarkRed
-Color: green         rgb(  0, 153, 140)     30           DarkGreen
-Color: yellow        rgb(216, 121,   0)     172          DarkYellow
-Color: blue          rgb( 82, 127, 143)     66           DarkBlue
-Color: magenta       rgb(219,  45,  69)     197          DarkMagenta
-Color: cyan          rgb( 21, 156, 204)     74           DarkCyan
-Color: white         rgb(240, 240, 240)     255          Gray
-Color: brightblack   rgb(136, 136, 136)     102          DarkGray
-Color: brightred     rgb(216, 121,   0)     172          Red
-Color: brightgreen   rgb(171, 185, 110)     143          Green
-Color: brightyellow  rgb(225, 173,  11)     178          Yellow
-Color: brightblue    rgb(140,  97, 166)     97           Blue
-Color: brightmagenta rgb(235,  49,  75)     197          Magenta
-Color: brightcyan    rgb( 35, 188, 225)     38           Cyan
-Color: brightwhite   rgb(250, 250, 250)     231          White
+; Color name         GUI         Base256      Base16
+Color: black         #5f5f61     59           Black
+Color: red           #e8503f     167          DarkRed
+Color: green         #00998c     30           DarkGreen
+Color: yellow        #d87900     172          DarkYellow
+Color: blue          #527f8f     66           DarkBlue
+Color: magenta       #db2d45     197          DarkMagenta
+Color: cyan          #159ccc     74           DarkCyan
+Color: white         #f0f0f0     255          Gray
+Color: brightblack   #888888     102          DarkGray
+Color: brightred     #d87900     172          Red
+Color: brightgreen   #abb96e     143          Green
+Color: brightyellow  #e1ad0b     178          Yellow
+Color: brightblue    #8c61a6     97           Blue
+Color: brightmagenta #eb314b     197          Magenta
+Color: brightcyan    #23bce1     38           Cyan
+Color: brightwhite   #fafafa     231          White
 ; }}}
 
 ; Terminal colors {{{
-Term Colors: black red green yellow blue magenta cyan white
-Term Colors: brightblack brightred brightgreen brightyellow
-Term Colors: brightblue brightmagenta brightcyan brightwhite
+Term Colors: black       red       green       yellow       blue       magenta       cyan       white
+             brightblack brightred brightgreen brightyellow brightblue brightmagenta brightcyan brightwhite
 ; }}}
 
 ; Common linked groups {{{
@@ -55,30 +54,33 @@ Typedef           -> Type
 lCursor           -> Cursor
 ; }}}
 
-Background: light
+; Discriminators {{{
+#const frame     = abs(get(g:, 'wwdc17_frame_color', 10)) % 16
+#const italic    = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
+#const transp_bg = get(g:, 'wwdc17_transp_bg', 0)
+#const transp_italic = (italic ? 1 : 0) + 2 * transp_bg
+; }}}
 
 ; Default highlight groups {{{
-Variant: gui
-#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
-Variant: 256 8
-#if get(g:, '@optionprefix_transp_bg', 0)
-Variant: gui 256 8
-  Normal           black             none
-  CursorLine       none              none              underline
-  CursorLineNr     brightred         none
-  Folded           brightblack       none              italic
-  LineNr           brightblack       none
-  FoldColumn       brightblack       none
-  Terminal         black             none
-#else
-  Normal           black             brightwhite
-  CursorLine       none              white
-  CursorLineNr     brightred         white
-  Folded           brightblack       white             italic
-  LineNr           brightblack       white
-  FoldColumn       brightblack       white
-  Terminal         black             brightwhite
-#endif
+Normal                           black             brightwhite
+CursorLine                       none              white
+CursorLineNr                     brightred         white
+LineNr                           brightblack       white
+FoldColumn                       brightblack       white
+Terminal                         black             brightwhite
+Folded                           brightblack       white        italic
+
+Normal      /256/8 +transp_bg 1  black             none
+CursorLine  /256/8 +transp_bg 1  none              none         underline
+CursorLineNr/256/8 +transp_bg 1  brightred         none
+LineNr      /256/8 +transp_bg 1  brightblack       none
+FoldColumn  /256/8 +transp_bg 1  brightblack       none
+Terminal    /256/8 +transp_bg 1  black             none
+Folded
+  /256/8
+    +transp_italic  0            brightblack       white
+    +transp_italic  2            brightblack       none
+    +transp_italic  3            brightblack       none         italic
 
 ColorColumn          none              white
 Conceal              green             none
@@ -91,8 +93,9 @@ DiffText             cyan              brightwhite       bold,reverse
 Directory            green             none
 EndOfBuffer          brightred         none
 ErrorMsg             red               brightwhite       reverse
-IncSearch            brightred         brightwhite       t=reverse g=standout
-MatchParen           none              none              bold,underline s=black
+IncSearch            brightred         brightwhite       standout
+IncSearch/256/8      brightred         brightwhite       reverse
+MatchParen           none              none s=black      bold,underline
 ModeMsg              black             none
 MoreMsg              brightred         none
 NonText              brightblack       none
@@ -104,153 +107,144 @@ Question             black             none
 Search               brightyellow      brightwhite       reverse
 SignColumn           brightred         none
 SpecialKey           brightred         none
-SpellBad             magenta           none              s=brightblack t=underline g=undercurl
-SpellCap             magenta           none              s=brightblack t=underline g=undercurl
-SpellLocal           magenta           none              s=brightblack t=underline g=undercurl
-SpellRare            magenta           none              s=brightblack t=underline g=undercurl
+SpellBad             magenta           none s=brightblack undercurl
+SpellCap             magenta           none s=brightblack undercurl
+SpellLocal           magenta           none s=brightblack undercurl
+SpellRare            magenta           none s=brightblack undercurl
+SpellBad  /256/8     magenta           none s=brightblack underline
+SpellCap  /256/8     magenta           none s=brightblack underline
+SpellLocal/256/8     magenta           none s=brightblack underline
+SpellRare /256/8     magenta           none s=brightblack underline
 Title                brightred         none              bold
 Visual               blue              brightwhite       reverse
 VisualNOS            brightwhite       blue
 WarningMsg           red               none
 
-#let s:fc = abs(get(g:, '@optionprefix_frame_color', 10)) % 16
+StatusLine              brightgreen       brightwhite       bold,reverse
+  /gui/256/8 +frame 0   black             brightwhite       bold,reverse
+             +frame 1   red               brightwhite       bold,reverse
+             +frame 2   green             brightwhite       bold,reverse
+             +frame 3   yellow            brightwhite       bold,reverse
+             +frame 4   blue              brightwhite       bold,reverse
+             +frame 5   magenta           brightwhite       bold,reverse
+             +frame 6   cyan              brightwhite       bold,reverse
+             +frame 7   white             black             bold,reverse
+             +frame 8   brightblack       brightwhite       bold,reverse
+             +frame 9   brightred         brightwhite       bold,reverse
+             +frame 11  brightyellow      brightwhite       bold,reverse
+             +frame 12  brightblue        brightwhite       bold,reverse
+             +frame 13  brightmagenta     brightwhite       bold,reverse
+             +frame 14  brightcyan        brightwhite       bold,reverse
+             +frame 15  brightwhite       black             bold,reverse
 
-#if s:fc == 0
-  StatusLine           black             brightwhite       bold,reverse
-  StatusLineNC         black             white             reverse
-  TabLine              white             black
-  TabLineFill          brightwhite       black
-  TabLineSel           brightwhite       black             bold
-  VertSplit            white             black
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 1
-  StatusLine           red               brightwhite       bold,reverse
-  StatusLineNC         red               white             reverse
-  TabLine              white             red
-  TabLineFill          brightwhite       red
-  TabLineSel           brightwhite       brightred         bold
-  VertSplit            white             red
-  WildMenu             brightwhite       brightgreen       bold
-#elseif s:fc == 2
-  StatusLine           green             brightwhite       bold,reverse
-  StatusLineNC         green             white             reverse
-  TabLine              white             green
-  TabLineFill          brightwhite       green
-  TabLineSel           brightwhite       green             bold
-  VertSplit            white             green
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 3
-  StatusLine           yellow            brightwhite       bold,reverse
-  StatusLineNC         yellow            white             reverse
-  TabLine              white             yellow
-  TabLineFill          brightwhite       yellow
-  TabLineSel           brightwhite       yellow            bold
-  VertSplit            white             yellow
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 4
-  StatusLine           blue              brightwhite       bold,reverse
-  StatusLineNC         blue              white             reverse
-  TabLine              brightwhite       blue
-  TabLineFill          brightwhite       blue
-  TabLineSel           brightwhite       blue              bold
-  VertSplit            white             blue
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 5
-  StatusLine           magenta           brightwhite       bold,reverse
-  StatusLineNC         magenta           white             reverse
-  TabLine              white             magenta
-  TabLineFill          white             magenta
-  TabLineSel           brightwhite       magenta           bold
-  VertSplit            white             magenta
-  WildMenu             brightwhite       yellow
-#elseif s:fc == 6
-  StatusLine           cyan              brightwhite       bold,reverse
-  StatusLineNC         cyan              white             reverse
-  TabLine              white             cyan
-  TabLineFill          brightwhite       cyan
-  TabLineSel           brightwhite       cyan              bold
-  VertSplit            white             cyan
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 7
-  StatusLine           white             black             bold,reverse
-  StatusLineNC         white             brightblack       reverse
-  TabLine              brightblack       white
-  TabLineFill          black             white
-  TabLineSel           black             white             bold
-  VertSplit            brightblack       white
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 8
-  StatusLine           brightblack       brightwhite       bold,reverse
-  StatusLineNC         brightblack       white             reverse
-  TabLine              white             brightblack
-  TabLineFill          brightwhite       brightblack
-  TabLineSel           brightwhite       brightblack       bold
-  VertSplit            white             brightblack
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 9
-  StatusLine           brightred         brightwhite       bold,reverse
-  StatusLineNC         brightred         white             reverse
-  TabLine              white             brightred
-  TabLineFill          brightwhite       brightred
-  TabLineSel           brightwhite       brightred         bold
-  VertSplit            white             brightred
-  WildMenu             brightwhite       brightgreen       bold
-#elseif s:fc == 10
-  StatusLine           brightgreen       brightwhite       bold,reverse
-  StatusLineNC         brightgreen       white             reverse
-  TabLine              white             brightgreen
-  TabLineFill          brightwhite       brightgreen
-  TabLineSel           brightwhite       brightgreen       bold
-  VertSplit            white             brightgreen
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 11
-  StatusLine           brightyellow      brightwhite       bold,reverse
-  StatusLineNC         brightyellow      white             reverse
-  TabLine              white             brightyellow
-  TabLineFill          brightwhite       brightyellow
-  TabLineSel           brightwhite       brightyellow      bold
-  VertSplit            white             brightyellow
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 12
-  StatusLine           brightblue        brightwhite       bold,reverse
-  StatusLineNC         brightblue        white             reverse
-  TabLine              white             brightblue
-  TabLineFill          brightwhite       brightblue
-  TabLineSel           brightwhite       brightblue        bold
-  VertSplit            white             brightblue
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 13
-  StatusLine           brightmagenta     brightwhite       bold,reverse
-  StatusLineNC         brightmagenta     white             reverse
-  TabLine              white             brightmagenta
-  TabLineFill          white             brightmagenta
-  TabLineSel           brightwhite       brightmagenta     bold
-  VertSplit            white             brightmagenta
-  WildMenu             brightwhite       yellow
-#elseif s:fc == 14
-  StatusLine           brightcyan        brightwhite       bold,reverse
-  StatusLineNC         brightcyan        white             reverse
-  TabLine              white             brightcyan
-  TabLineFill          brightwhite       brightcyan
-  TabLineSel           brightwhite       brightcyan        bold
-  VertSplit            white             brightcyan
-  WildMenu             brightwhite       magenta           bold
-#elseif s:fc == 15
-  StatusLine           brightwhite       black             bold,reverse
-  StatusLineNC         brightwhite       brightblack       reverse
-  TabLine              brightblack       brightwhite
-  TabLineFill          brightblack       brightwhite
-  TabLineSel           black             brightwhite       bold
-  VertSplit            brightblack       brightwhite
-  WildMenu             brightwhite       brightblack
-#endif
+StatusLineNC            brightgreen       white             reverse
+  /gui/256/8 +frame 0   black             white             reverse
+             +frame 1   red               white             reverse
+             +frame 2   green             white             reverse
+             +frame 3   yellow            white             reverse
+             +frame 4   blue              white             reverse
+             +frame 5   magenta           white             reverse
+             +frame 6   cyan              white             reverse
+             +frame 7   white             brightblack       reverse
+             +frame 8   brightblack       white             reverse
+             +frame 9   brightred         white             reverse
+             +frame 11  brightyellow      white             reverse
+             +frame 12  brightblue        white             reverse
+             +frame 13  brightmagenta     white             reverse
+             +frame 14  brightcyan        white             reverse
+             +frame 15  brightwhite       brightblack       reverse
 
-#unlet s:fc
+TabLine                 white             brightgreen
+  /gui/256/8 +frame 0   white             black
+             +frame 1   white             red
+             +frame 2   white             green
+             +frame 3   white             yellow
+             +frame 4   brightwhite       blue
+             +frame 5   white             magenta
+             +frame 6   white             cyan
+             +frame 7   brightblack       white
+             +frame 8   white             brightblack
+             +frame 9   white             brightred
+             +frame 11  white             brightyellow
+             +frame 12  white             brightblue
+             +frame 13  white             brightmagenta
+             +frame 14  white             brightcyan
+             +frame 15  brightblack       brightwhite
+
+TabLineFill             brightwhite       brightgreen
+  /gui/256/8 +frame 0   brightwhite       black
+             +frame 1   brightwhite       red
+             +frame 2   brightwhite       green
+             +frame 3   brightwhite       yellow
+             +frame 4   brightwhite       blue
+             +frame 5   white             magenta
+             +frame 6   brightwhite       cyan
+             +frame 7   black             white
+             +frame 8   brightwhite       brightblack
+             +frame 9   brightwhite       brightred
+             +frame 11  brightwhite       brightyellow
+             +frame 12  brightwhite       brightblue
+             +frame 13  white             brightmagenta
+             +frame 14  brightwhite       brightcyan
+             +frame 15  brightblack       brightwhite
+
+TabLineSel              brightwhite       brightgreen       bold
+  /gui/256/8 +frame 0   brightwhite       black             bold
+             +frame 1   brightwhite       brightred         bold
+             +frame 2   brightwhite       green             bold
+             +frame 3   brightwhite       yellow            bold
+             +frame 4   brightwhite       blue              bold
+             +frame 5   brightwhite       magenta           bold
+             +frame 6   brightwhite       cyan              bold
+             +frame 7   black             white             bold
+             +frame 8   brightwhite       brightblack       bold
+             +frame 9   brightwhite       brightred         bold
+             +frame 11  brightwhite       brightyellow      bold
+             +frame 12  brightwhite       brightblue        bold
+             +frame 13  brightwhite       brightmagenta     bold
+             +frame 14  brightwhite       brightcyan        bold
+             +frame 15  black             brightwhite       bold
+
+VertSplit               white             brightgreen
+  /gui/256/8 +frame 0   white             black
+             +frame 1   white             red
+             +frame 2   white             green
+             +frame 3   white             yellow
+             +frame 4   white             blue
+             +frame 5   white             magenta
+             +frame 6   white             cyan
+             +frame 7   brightblack       white
+             +frame 8   white             brightblack
+             +frame 9   white             brightred
+             +frame 11  white             brightyellow
+             +frame 12  white             brightblue
+             +frame 13  white             brightmagenta
+             +frame 14  white             brightcyan
+             +frame 15  brightblack       brightwhite
+
+WildMenu                brightwhite       magenta           bold
+  /gui/256/8 +frame 0   brightwhite       magenta           bold
+             +frame 1   brightwhite       brightgreen       bold
+             +frame 2   brightwhite       magenta           bold
+             +frame 3   brightwhite       magenta           bold
+             +frame 4   brightwhite       magenta           bold
+             +frame 5   brightwhite       yellow
+             +frame 6   brightwhite       magenta           bold
+             +frame 7   brightwhite       magenta           bold
+             +frame 8   brightwhite       magenta           bold
+             +frame 9   brightwhite       brightgreen       bold
+             +frame 11  brightwhite       magenta           bold
+             +frame 12  brightwhite       magenta           bold
+             +frame 13  brightwhite       yellow
+             +frame 14  brightwhite       magenta           bold
+             +frame 15  brightwhite       brightblack
 
 ; Other conventional group names (see `:help group-name`)
 Boolean              brightgreen       none
 Character            magenta           none
 Comment              brightblack       none              italic
+  /256/8
+   +italic false     brightblack       none
 Constant             green             none
 Debug                magenta           none
 Delimiter            blue              none
@@ -299,9 +293,7 @@ TermCursorNC         brightwhite       black
 Include: _bw.colortemplate
 ; }}}
 
-Variant: gui
-
 ; Demo :) {{{
-Include: _demo.colortemplate
+; Include: _demo.colortemplate
 ; }}}
 
