@@ -55,9 +55,9 @@ lCursor           -> Cursor
 ; }}}
 
 ; Discriminators {{{
-#const frame     = abs(get(g:, 'wwdc17_frame_color', 10)) % 16
-#const italic    = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
-#const transp_bg = get(g:, 'wwdc17_transp_bg', 0)
+#const frame         = abs(get(g:, 'wwdc17_frame_color', 10)) % 16
+#const italic        = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
+#const transp_bg     = get(g:, 'wwdc17_transp_bg', 0)
 #const transp_italic = (italic ? 1 : 0) + 2 * transp_bg
 ; }}}
 
@@ -94,8 +94,9 @@ Directory            green             none
 EndOfBuffer          brightred         none
 ErrorMsg             red               brightwhite       reverse
 IncSearch            brightred         brightwhite       standout
-IncSearch/256/8      brightred         brightwhite       reverse
+IncSearch    /256/8  brightred         brightwhite       reverse
 MatchParen           none              none s=black      bold,underline
+MatchParen   /256/8  none              none              bold,underline
 ModeMsg              black             none
 MoreMsg              brightred         none
 NonText              brightblack       none
@@ -111,10 +112,10 @@ SpellBad             magenta           none s=brightblack undercurl
 SpellCap             magenta           none s=brightblack undercurl
 SpellLocal           magenta           none s=brightblack undercurl
 SpellRare            magenta           none s=brightblack undercurl
-SpellBad  /256/8     magenta           none s=brightblack underline
-SpellCap  /256/8     magenta           none s=brightblack underline
-SpellLocal/256/8     magenta           none s=brightblack underline
-SpellRare /256/8     magenta           none s=brightblack underline
+SpellBad     /256/8  magenta           none               underline
+SpellCap     /256/8  magenta           none               underline
+SpellLocal   /256/8  magenta           none               underline
+SpellRare    /256/8  magenta           none               underline
 Title                brightred         none              bold
 Visual               blue              brightwhite       reverse
 VisualNOS            brightwhite       blue
