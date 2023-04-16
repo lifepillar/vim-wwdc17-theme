@@ -33,6 +33,27 @@ Color: brightwhite   #fafafa     231          White
 Term Colors: black       red       green       yellow       blue       magenta       cyan       white
              brightblack brightred brightgreen brightyellow brightblue brightmagenta brightcyan brightwhite
 
+verbatim
+if has('nvim')
+  let g:terminal_color_0  = '@black'
+  let g:terminal_color_1  = '@red'
+  let g:terminal_color_2  = '@green'
+  let g:terminal_color_3  = '@yellow'
+  let g:terminal_color_4  = '@blue'
+  let g:terminal_color_5  = '@magenta'
+  let g:terminal_color_6  = '@cyan'
+  let g:terminal_color_7  = '@white'
+  let g:terminal_color_8  = '@brightblack'
+  let g:terminal_color_9  = '@brightred'
+  let g:terminal_color_10 = '@brightgreen'
+  let g:terminal_color_11 = '@brightyellow'
+  let g:terminal_color_12 = '@brightblue'
+  let g:terminal_color_13 = '@brightmagenta'
+  let g:terminal_color_14 = '@brightcyan'
+  let g:terminal_color_15 = '@brightwhite'
+endif
+endverbatim
+
 ; Common linked groups {{{
 QuickFixLine      -> Search
 StatusLineTerm    -> StatusLine
