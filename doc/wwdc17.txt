@@ -1,7 +1,7 @@
-*wwdc17.txt*	For Vim version 8.2	Last change: 2022 Mar 20
+*wwdc17.txt*	For Vim version 9	Last change: 2023 Apr 16
 
 
-		WWDC17 color scheme    by Lifepillar
+		WWDC17 color scheme    by Lifepillar <lifepillar@lifepillar.me>
 
 WWDC17 is a colorful colorscheme inspired by the colors of Apple's WWDC17
 event. Apart from the fact that I shamelessly copied some color codes from the

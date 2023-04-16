@@ -6,15 +6,12 @@ Author:      Lifepillar <lifepillar@lifepillar.me>
 URL:         https://github.com/lifepillar/vim-wwdc17-theme
 Description: Colorful light color scheme for Vim inspired by Apple's WWDC17 page
 License:     MIT
+Options:     backend=legacy
 
-Variants:    gui 256 8 0
+Variants:    256 8 0
 Background:  light
+Include:     _help.colortemplate
 
-; Documentation {{{
-; Include: _help.colortemplate
-; }}}
-
-; Color palette {{{
 ; Color name         GUI         Base256      Base16
 Color: black         #5f5f61     59           Black
 Color: red           #e8503f     167          DarkRed
@@ -32,12 +29,9 @@ Color: brightblue    #8c61a6     97           Blue
 Color: brightmagenta #eb314b     197          Magenta
 Color: brightcyan    #23bce1     38           Cyan
 Color: brightwhite   #fafafa     231          White
-; }}}
 
-; Terminal colors {{{
 Term Colors: black       red       green       yellow       blue       magenta       cyan       white
              brightblack brightred brightgreen brightyellow brightblue brightmagenta brightcyan brightwhite
-; }}}
 
 ; Common linked groups {{{
 QuickFixLine      -> Search
@@ -58,7 +52,7 @@ lCursor           -> Cursor
 #const frame         = abs(get(g:, 'wwdc17_frame_color', 10)) % 16
 #const italic        = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
 #const transp_bg     = get(g:, 'wwdc17_transp_bg', 0)
-#const transp_italic = (italic ? 1 : 0) + 2 * transp_bg
+#const transp_italic = (s:italic ? 1 : 0) + 2 * s:transp_bg
 ; }}}
 
 ; Default highlight groups {{{
@@ -76,11 +70,10 @@ CursorLineNr/256/8 +transp_bg 1  brightred         none
 LineNr      /256/8 +transp_bg 1  brightblack       none
 FoldColumn  /256/8 +transp_bg 1  brightblack       none
 Terminal    /256/8 +transp_bg 1  black             none
-Folded
-  /256/8
-    +transp_italic  0            brightblack       white
-    +transp_italic  2            brightblack       none
-    +transp_italic  3            brightblack       none         italic
+Folded      /256/8
+               +transp_italic 0  brightblack       white
+               +transp_italic 2  brightblack       none
+               +transp_italic 3  brightblack       none         italic
 
 ColorColumn          none              white
 Conceal              green             none
@@ -241,40 +234,37 @@ WildMenu                brightwhite       magenta           bold
              +frame 15  brightwhite       brightblack
 
 ; Other conventional group names (see `:help group-name`)
-Boolean              brightgreen       none
-Character            magenta           none
-Comment              brightblack       none              italic
-  /256/8
-   +italic false     brightblack       none
-Constant             green             none
-Debug                magenta           none
-Delimiter            blue              none
-Error                red               brightwhite       reverse
-Float                brightgreen       none
-Function             green             none
-Identifier           blue              none
-Ignore               yellow            none
-Include              brightblue        none
-Keyword              cyan              none
-Label                green             none
-Number               green             none
-Operator             cyan              none
-PreProc              red               none
-Special              red               none
-SpecialChar          magenta           none
-SpecialComment       magenta           none
-Statement            cyan              none
-StorageClass         cyan              none
-String               brightred         none
-Structure            red               none
-Todo                 magenta           none              bold
-Type                 brightblue        none
-Underlined           none              none              underline
-; See `:help CursorIM`
-CursorIM             none              brightwhite
-; See `:help window-toolbar`
-ToolbarLine          brightblack       white
-ToolbarButton        black             white             bold
+Boolean                 brightgreen       none
+Character               magenta           none
+Comment                 brightblack       none              italic
+    /256/8 +italic 0    brightblack       none
+Constant                green             none
+Debug                   magenta           none
+Delimiter               blue              none
+Error                   red               brightwhite       reverse
+Float                   brightgreen       none
+Function                green             none
+Identifier              blue              none
+Ignore                  yellow            none
+Include                 brightblue        none
+Keyword                 cyan              none
+Label                   green             none
+Number                  green             none
+Operator                cyan              none
+PreProc                 red               none
+Special                 red               none
+SpecialChar             magenta           none
+SpecialComment          magenta           none
+Statement               cyan              none
+StorageClass            cyan              none
+String                  brightred         none
+Structure               red               none
+Todo                    magenta           none              bold
+Type                    brightblue        none
+Underlined              none              none              underline
+CursorIM                none              brightwhite
+ToolbarLine             brightblack       white
+ToolbarButton           black             white             bold
 ; }}}
 
 ; Additional highlight groups {{{
@@ -295,6 +285,6 @@ Include: _bw.colortemplate
 ; }}}
 
 ; Demo :) {{{
-; Include: _demo.colortemplate
+Include: _demo.colortemplate
 ; }}}
 
