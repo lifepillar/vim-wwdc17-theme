@@ -55,17 +55,26 @@ endif
 endverbatim
 
 ; Common linked groups {{{
-QuickFixLine      -> Search
-StatusLineTerm    -> StatusLine
-StatusLineTermNC  -> StatusLineNC
 Conditional       -> Statement
+CurSearch         -> Search
+CursorLineFold    -> FoldColumn
+CursorLineSign    -> SignColumn
 Define            -> PreProc
 Exception         -> Statement
+LineNrAbove       -> LineNr
+LineNrBelow       -> LineNr
 Macro             -> PreProc
+PopupNotification -> WarningMsg
+PopupSelected     -> PmenuSel
 PreCondit         -> PreProc
+QuickFixLine      -> Search
 Repeat            -> Statement
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
 Tag               -> Special
 Typedef           -> Type
+debugBreakpoint   -> SignColumn
+debugPC           -> SignColumn
 lCursor           -> Cursor
 ; }}}
 
