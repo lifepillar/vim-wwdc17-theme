@@ -11,7 +11,7 @@ Looking for a companion dark theme? Check out
 This color scheme works **out of the box everywhere**. For the best experience,
 you need:
 
-- Vim ≥7.4.1799, or NeoVim, with `termguicolors` set, **and**
+- Vim ≥7.4.1799 with `termguicolors` set, **and**
 - [a true-color enabled terminal](https://gist.github.com/XVilka/8346728).
 
 WWDC17 also works in MacVim, gVim, etc…: no configuration is needed.
