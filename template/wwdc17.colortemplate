@@ -105,6 +105,11 @@ Folded      /256/8
                +transp_italic 2  brightblack       none
                +transp_italic 3  brightblack       none         italic
 
+Added                green             none              italic
+Added
+  /256/8+italic 0    green             none
+Changed              blue              none              bold,italic
+  /256/8+italic 0    blue              none
 ColorColumn          none              white
 Conceal              green             none
 Cursor               none              none              reverse
@@ -128,6 +133,8 @@ PmenuSbar            brightred         brightblack
 PmenuSel             brightwhite       brightred
 PmenuThumb           red               brightred
 Question             black             none
+Removed              red               none              bold,italic,strikethrough
+  /256/8 +italic 0   red               none              bold,strikethrough
 Search               brightyellow      brightwhite       reverse
 SignColumn           brightred         none
 SpecialKey           brightred         none
