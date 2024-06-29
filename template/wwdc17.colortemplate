@@ -64,6 +64,8 @@ Exception         -> Statement
 LineNrAbove       -> LineNr
 LineNrBelow       -> LineNr
 Macro             -> PreProc
+PmenuMatch        -> Pmenu
+PmenuMatchSel     -> PmenuSel
 PopupNotification -> WarningMsg
 PopupSelected     -> PmenuSel
 PreCondit         -> PreProc
