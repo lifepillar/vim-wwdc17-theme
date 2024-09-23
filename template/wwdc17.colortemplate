@@ -82,7 +82,7 @@ lCursor           -> Cursor
 
 ; Discriminators {{{
 #const frame         = abs(get(g:, 'wwdc17_frame_color', 10)) % 16
-#const italic        = (&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')
+#const italic        = has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32'))
 #const transp_bg     = get(g:, 'wwdc17_transp_bg', 0)
 #const transp_italic = (s:italic ? 1 : 0) + 2 * s:transp_bg
 ; }}}
