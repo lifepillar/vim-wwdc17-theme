@@ -8,7 +8,7 @@ Description: Colorful light color scheme for Vim inspired by Apple's WWDC17 page
 License:     MIT
 Options:     backend=legacy
 
-Variants:    256 8 0
+Variants:    gui 256 8 0
 Background:  light
 Include:     _help.colortemplate
 
@@ -73,6 +73,9 @@ QuickFixLine      -> Search
 Repeat            -> Statement
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
+TabPanel          -> TabLine
+TabPanelFill      -> TabPanelFill
+TabPanelSel       -> TabePanelSel
 Tag               -> Special
 Typedef           -> Type
 debugBreakpoint   -> SignColumn
@@ -88,235 +91,316 @@ lCursor           -> Cursor
 ; }}}
 
 ; Default highlight groups {{{
-Normal                           black             brightwhite
-CursorLine                       none              white
-CursorLineNr                     brightred         white
-LineNr                           brightblack       white
-FoldColumn                       brightblack       white
-Terminal                         black             brightwhite
-Folded                           brightblack       white        italic
+Normal                            black             brightwhite       s=omit ; Suppress ctermul for Neovim compatibility
+              /gui                omit              omit              s=none omit ; ...but let guisp=NONE
+              /256/8 +transp_bg 1 black             none              s=omit
+CursorLine                        none              white             s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 none              none              s=omit underline
+CursorLineNr                      brightred         white             s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 brightred         none              s=omit
+LineNr                            brightblack       white             s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 brightblack       none              s=omit
+FoldColumn                        brightblack       white             s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 brightblack       none              s=omit
+Terminal                          black             brightwhite       s=omit
+              /gui                omit              omit              s=none omit
+              /256/8 +transp_bg 1 black             none              s=omit
+Folded                            brightblack       white             s=omit italic
+              /256/8
+               +transp_italic 0   brightblack       white             s=omit
+               +transp_italic 2   brightblack       none              s=omit
+               +transp_italic 3   brightblack       none              s=omit italic
 
-Normal      /256/8 +transp_bg 1  black             none
-CursorLine  /256/8 +transp_bg 1  none              none         underline
-CursorLineNr/256/8 +transp_bg 1  brightred         none
-LineNr      /256/8 +transp_bg 1  brightblack       none
-FoldColumn  /256/8 +transp_bg 1  brightblack       none
-Terminal    /256/8 +transp_bg 1  black             none
-Folded      /256/8
-               +transp_italic 0  brightblack       white
-               +transp_italic 2  brightblack       none
-               +transp_italic 3  brightblack       none         italic
+Added                             green             none              s=omit italic
+              /gui                omit              omit              s=none omit
+              /256/8+italic 0     green             none              s=omit
+Changed                           blue              none              s=omit bold,italic
+              /256/8+italic 0     blue              none              s=omit
+              /gui                omit              omit              s=none omit
+ColorColumn                       none              white             s=omit
+              /gui                omit              omit              s=none omit
+Conceal                           green             none              s=omit
+              /gui                omit              omit              s=none omit
+Cursor                            none              none              s=omit reverse
+              /gui                omit              omit              s=none omit
+CursorColumn                      none              white             s=omit
+              /gui                omit              omit              s=none omit
+DiffAdd                           brightgreen       black             s=omit reverse
+              /gui                omit              omit              s=none omit
+DiffChange                        yellow            brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+DiffDelete                        red               brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+DiffText                          cyan              brightwhite       s=omit bold,reverse
+              /gui                omit              omit              s=none omit
+Directory                         green             none              s=omit
+              /gui                omit              omit              s=none omit
+EndOfBuffer                       brightred         none              s=omit
+              /gui                omit              omit              s=none omit
+ErrorMsg                          red               brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+IncSearch                         brightred         brightwhite       s=omit standout
+              /gui                omit              omit              s=none omit
+              /256/8              brightred         brightwhite       s=omit reverse
+MatchParen                        none              none              s=omit bold,underline
+              /gui                omit              omit              s=black omit
+              /256/8              none              none              s=omit bold,underline
+ModeMsg                           black             none              s=omit
+              /gui                omit              omit              s=none omit
+MoreMsg                           brightred         none              s=omit
+              /gui                omit              omit              s=none omit
+NonText                           brightblack       none              s=omit
+              /gui                omit              omit              s=none omit
+Pmenu                             black             white             s=omit
+              /gui                omit              omit              s=none omit
+PmenuSbar                         brightred         brightblack       s=omit
+              /gui                omit              omit              s=none omit
+PmenuSel                          brightwhite       brightred         s=omit
+              /gui                omit              omit              s=none omit
+PmenuThumb                        red               brightred         s=omit
+              /gui                omit              omit              s=none omit
+Question                          black             none              s=omit
+              /gui                omit              omit              s=none omit
+Removed                           red               none              s=omit bold,italic,strikethrough
+              /256/8 +italic 0    red               none              s=omit bold,strikethrough
+Search                            brightyellow      brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+SignColumn                        brightred         none              s=omit
+              /gui                omit              omit              s=none omit
+SpecialKey                        brightred         none              s=omit
+              /gui                omit              omit              s=none omit
+SpellBad                          magenta           none              s=omit undercurl
+              /gui                omit              omit              s=brightblack omit
+              /256/8              omit              omit              s=omit underline
+SpellCap                          magenta           none              s=omit undercurl
+              /gui                omit              omit              s=brightblack omit
+              /256/8              omit              omit              s=omit underline
+SpellLocal                        magenta           none              s=omit undercurl
+              /gui                omit              omit              s=brightblack omit
+              /256/8              omit              omit              s=omit underline
+SpellRare                         magenta           none              s=omit undercurl
+              /gui                omit              omit              s=brightblack omit
+              /256/8              omit              omit              s=omit underline
+Title                             brightred         none              s=omit bold
+              /gui                omit              omit              s=none omit
+Visual                            blue              brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+VisualNOS                         brightwhite       blue              s=omit
+              /gui                omit              omit              s=none omit
+WarningMsg                        red               none              s=omit
+              /gui                omit              omit              s=none omit
 
-Added                green             none              italic
-Added
-  /256/8+italic 0    green             none
-Changed              blue              none              bold,italic
-  /256/8+italic 0    blue              none
-ColorColumn          none              white
-Conceal              green             none
-Cursor               none              none              reverse
-CursorColumn         none              white
-DiffAdd              brightgreen       black             reverse
-DiffChange           yellow            brightwhite       reverse
-DiffDelete           red               brightwhite       reverse
-DiffText             cyan              brightwhite       bold,reverse
-Directory            green             none
-EndOfBuffer          brightred         none
-ErrorMsg             red               brightwhite       reverse
-IncSearch            brightred         brightwhite       standout
-IncSearch    /256/8  brightred         brightwhite       reverse
-MatchParen           none              none s=black      bold,underline
-MatchParen   /256/8  none              none              bold,underline
-ModeMsg              black             none
-MoreMsg              brightred         none
-NonText              brightblack       none
-Pmenu                black             white
-PmenuSbar            brightred         brightblack
-PmenuSel             brightwhite       brightred
-PmenuThumb           red               brightred
-Question             black             none
-Removed              red               none              bold,italic,strikethrough
-  /256/8 +italic 0   red               none              bold,strikethrough
-Search               brightyellow      brightwhite       reverse
-SignColumn           brightred         none
-SpecialKey           brightred         none
-SpellBad             magenta           none s=brightblack undercurl
-SpellCap             magenta           none s=brightblack undercurl
-SpellLocal           magenta           none s=brightblack undercurl
-SpellRare            magenta           none s=brightblack undercurl
-SpellBad     /256/8  magenta           none               underline
-SpellCap     /256/8  magenta           none               underline
-SpellLocal   /256/8  magenta           none               underline
-SpellRare    /256/8  magenta           none               underline
-Title                brightred         none              bold
-Visual               blue              brightwhite       reverse
-VisualNOS            brightwhite       blue
-WarningMsg           red               none
+StatusLine                        brightgreen       brightwhite       s=omit bold,reverse
+  /gui                            omit              omit              s=none omit
+  /gui/256/8 +frame 0             black             brightwhite       s=omit bold,reverse
+             +frame 1             red               brightwhite       s=omit bold,reverse
+             +frame 2             green             brightwhite       s=omit bold,reverse
+             +frame 3             yellow            brightwhite       s=omit bold,reverse
+             +frame 4             blue              brightwhite       s=omit bold,reverse
+             +frame 5             magenta           brightwhite       s=omit bold,reverse
+             +frame 6             cyan              brightwhite       s=omit bold,reverse
+             +frame 7             white             black             s=omit bold,reverse
+             +frame 8             brightblack       brightwhite       s=omit bold,reverse
+             +frame 9             brightred         brightwhite       s=omit bold,reverse
+             +frame 11            brightyellow      brightwhite       s=omit bold,reverse
+             +frame 12            brightblue        brightwhite       s=omit bold,reverse
+             +frame 13            brightmagenta     brightwhite       s=omit bold,reverse
+             +frame 14            brightcyan        brightwhite       s=omit bold,reverse
+             +frame 15            brightwhite       black             s=omit bold,reverse
 
-StatusLine              brightgreen       brightwhite       bold,reverse
-  /gui/256/8 +frame 0   black             brightwhite       bold,reverse
-             +frame 1   red               brightwhite       bold,reverse
-             +frame 2   green             brightwhite       bold,reverse
-             +frame 3   yellow            brightwhite       bold,reverse
-             +frame 4   blue              brightwhite       bold,reverse
-             +frame 5   magenta           brightwhite       bold,reverse
-             +frame 6   cyan              brightwhite       bold,reverse
-             +frame 7   white             black             bold,reverse
-             +frame 8   brightblack       brightwhite       bold,reverse
-             +frame 9   brightred         brightwhite       bold,reverse
-             +frame 11  brightyellow      brightwhite       bold,reverse
-             +frame 12  brightblue        brightwhite       bold,reverse
-             +frame 13  brightmagenta     brightwhite       bold,reverse
-             +frame 14  brightcyan        brightwhite       bold,reverse
-             +frame 15  brightwhite       black             bold,reverse
+StatusLineNC                      brightgreen       white             s=omit reverse
+  /gui                            omit              omit              s=none omit
+  /gui/256/8 +frame 0             black             white             s=omit reverse
+             +frame 1             red               white             s=omit reverse
+             +frame 2             green             white             s=omit reverse
+             +frame 3             yellow            white             s=omit reverse
+             +frame 4             blue              white             s=omit reverse
+             +frame 5             magenta           white             s=omit reverse
+             +frame 6             cyan              white             s=omit reverse
+             +frame 7             white             brightblack       s=omit reverse
+             +frame 8             brightblack       white             s=omit reverse
+             +frame 9             brightred         white             s=omit reverse
+             +frame 11            brightyellow      white             s=omit reverse
+             +frame 12            brightblue        white             s=omit reverse
+             +frame 13            brightmagenta     white             s=omit reverse
+             +frame 14            brightcyan        white             s=omit reverse
+             +frame 15            brightwhite       brightblack       s=omit reverse
 
-StatusLineNC            brightgreen       white             reverse
-  /gui/256/8 +frame 0   black             white             reverse
-             +frame 1   red               white             reverse
-             +frame 2   green             white             reverse
-             +frame 3   yellow            white             reverse
-             +frame 4   blue              white             reverse
-             +frame 5   magenta           white             reverse
-             +frame 6   cyan              white             reverse
-             +frame 7   white             brightblack       reverse
-             +frame 8   brightblack       white             reverse
-             +frame 9   brightred         white             reverse
-             +frame 11  brightyellow      white             reverse
-             +frame 12  brightblue        white             reverse
-             +frame 13  brightmagenta     white             reverse
-             +frame 14  brightcyan        white             reverse
-             +frame 15  brightwhite       brightblack       reverse
+TabLine                           white             brightgreen       s=omit
+  /gui                            omit              omit              s=none omit
+  /gui/256/8 +frame 0             white             black             s=omit
+             +frame 1             white             red               s=omit
+             +frame 2             white             green             s=omit
+             +frame 3             white             yellow            s=omit
+             +frame 4             brightwhite       blue              s=omit
+             +frame 5             white             magenta           s=omit
+             +frame 6             white             cyan              s=omit
+             +frame 7             brightblack       white             s=omit
+             +frame 8             white             brightblack       s=omit
+             +frame 9             white             brightred         s=omit
+             +frame 11            white             brightyellow      s=omit
+             +frame 12            white             brightblue        s=omit
+             +frame 13            white             brightmagenta     s=omit
+             +frame 14            white             brightcyan        s=omit
+             +frame 15            brightblack       brightwhite       s=omit
 
-TabLine                 white             brightgreen
-  /gui/256/8 +frame 0   white             black
-             +frame 1   white             red
-             +frame 2   white             green
-             +frame 3   white             yellow
-             +frame 4   brightwhite       blue
-             +frame 5   white             magenta
-             +frame 6   white             cyan
-             +frame 7   brightblack       white
-             +frame 8   white             brightblack
-             +frame 9   white             brightred
-             +frame 11  white             brightyellow
-             +frame 12  white             brightblue
-             +frame 13  white             brightmagenta
-             +frame 14  white             brightcyan
-             +frame 15  brightblack       brightwhite
+TabLineFill                       brightwhite       brightgreen       s=omit
+  /gui                            omit              omit              s=none omit
+  /gui/256/8 +frame 0             brightwhite       black             s=omit
+             +frame 1             brightwhite       red               s=omit
+             +frame 2             brightwhite       green             s=omit
+             +frame 3             brightwhite       yellow            s=omit
+             +frame 4             brightwhite       blue              s=omit
+             +frame 5             white             magenta           s=omit
+             +frame 6             brightwhite       cyan              s=omit
+             +frame 7             black             white             s=omit
+             +frame 8             brightwhite       brightblack       s=omit
+             +frame 9             brightwhite       brightred         s=omit
+             +frame 11            brightwhite       brightyellow      s=omit
+             +frame 12            brightwhite       brightblue        s=omit
+             +frame 13            white             brightmagenta     s=omit
+             +frame 14            brightwhite       brightcyan        s=omit
+             +frame 15            brightblack       brightwhite       s=omit
 
-TabLineFill             brightwhite       brightgreen
-  /gui/256/8 +frame 0   brightwhite       black
-             +frame 1   brightwhite       red
-             +frame 2   brightwhite       green
-             +frame 3   brightwhite       yellow
-             +frame 4   brightwhite       blue
-             +frame 5   white             magenta
-             +frame 6   brightwhite       cyan
-             +frame 7   black             white
-             +frame 8   brightwhite       brightblack
-             +frame 9   brightwhite       brightred
-             +frame 11  brightwhite       brightyellow
-             +frame 12  brightwhite       brightblue
-             +frame 13  white             brightmagenta
-             +frame 14  brightwhite       brightcyan
-             +frame 15  brightblack       brightwhite
+TabLineSel                        brightwhite       brightgreen       s=omit bold
+  /gui                            omit              omit              s=none omit
+  /gui/256/8 +frame 0             brightwhite       black             s=omit bold
+             +frame 1             brightwhite       brightred         s=omit bold
+             +frame 2             brightwhite       green             s=omit bold
+             +frame 3             brightwhite       yellow            s=omit bold
+             +frame 4             brightwhite       blue              s=omit bold
+             +frame 5             brightwhite       magenta           s=omit bold
+             +frame 6             brightwhite       cyan              s=omit bold
+             +frame 7             black             white             s=omit bold
+             +frame 8             brightwhite       brightblack       s=omit bold
+             +frame 9             brightwhite       brightred         s=omit bold
+             +frame 11            brightwhite       brightyellow      s=omit bold
+             +frame 12            brightwhite       brightblue        s=omit bold
+             +frame 13            brightwhite       brightmagenta     s=omit bold
+             +frame 14            brightwhite       brightcyan        s=omit bold
+             +frame 15            black             brightwhite       s=omit bold
 
-TabLineSel              brightwhite       brightgreen       bold
-  /gui/256/8 +frame 0   brightwhite       black             bold
-             +frame 1   brightwhite       brightred         bold
-             +frame 2   brightwhite       green             bold
-             +frame 3   brightwhite       yellow            bold
-             +frame 4   brightwhite       blue              bold
-             +frame 5   brightwhite       magenta           bold
-             +frame 6   brightwhite       cyan              bold
-             +frame 7   black             white             bold
-             +frame 8   brightwhite       brightblack       bold
-             +frame 9   brightwhite       brightred         bold
-             +frame 11  brightwhite       brightyellow      bold
-             +frame 12  brightwhite       brightblue        bold
-             +frame 13  brightwhite       brightmagenta     bold
-             +frame 14  brightwhite       brightcyan        bold
-             +frame 15  black             brightwhite       bold
+VertSplit                         white             brightgreen       s=omit
+  /gui                            omit              omit              s=none omit
+  /gui/256/8 +frame 0             white             black             s=omit
+             +frame 1             white             red               s=omit
+             +frame 2             white             green             s=omit
+             +frame 3             white             yellow            s=omit
+             +frame 4             white             blue              s=omit
+             +frame 5             white             magenta           s=omit
+             +frame 6             white             cyan              s=omit
+             +frame 7             brightblack       white             s=omit
+             +frame 8             white             brightblack       s=omit
+             +frame 9             white             brightred         s=omit
+             +frame 11            white             brightyellow      s=omit
+             +frame 12            white             brightblue        s=omit
+             +frame 13            white             brightmagenta     s=omit
+             +frame 14            white             brightcyan        s=omit
+             +frame 15            brightblack       brightwhite       s=omit
 
-VertSplit               white             brightgreen
-  /gui/256/8 +frame 0   white             black
-             +frame 1   white             red
-             +frame 2   white             green
-             +frame 3   white             yellow
-             +frame 4   white             blue
-             +frame 5   white             magenta
-             +frame 6   white             cyan
-             +frame 7   brightblack       white
-             +frame 8   white             brightblack
-             +frame 9   white             brightred
-             +frame 11  white             brightyellow
-             +frame 12  white             brightblue
-             +frame 13  white             brightmagenta
-             +frame 14  white             brightcyan
-             +frame 15  brightblack       brightwhite
-
-WildMenu                brightwhite       magenta           bold
-  /gui/256/8 +frame 0   brightwhite       magenta           bold
-             +frame 1   brightwhite       brightgreen       bold
-             +frame 2   brightwhite       magenta           bold
-             +frame 3   brightwhite       magenta           bold
-             +frame 4   brightwhite       magenta           bold
-             +frame 5   brightwhite       yellow
-             +frame 6   brightwhite       magenta           bold
-             +frame 7   brightwhite       magenta           bold
-             +frame 8   brightwhite       magenta           bold
-             +frame 9   brightwhite       brightgreen       bold
-             +frame 11  brightwhite       magenta           bold
-             +frame 12  brightwhite       magenta           bold
-             +frame 13  brightwhite       yellow
-             +frame 14  brightwhite       magenta           bold
-             +frame 15  brightwhite       brightblack
+WildMenu                          brightwhite       magenta           s=omit bold
+  /gui                            omit              omit              s=none omit
+  /gui/256/8 +frame 0             brightwhite       magenta           s=omit bold
+             +frame 1             brightwhite       brightgreen       s=omit bold
+             +frame 2             brightwhite       magenta           s=omit bold
+             +frame 3             brightwhite       magenta           s=omit bold
+             +frame 4             brightwhite       magenta           s=omit bold
+             +frame 5             brightwhite       yellow            s=omit
+             +frame 6             brightwhite       magenta           s=omit bold
+             +frame 7             brightwhite       magenta           s=omit bold
+             +frame 8             brightwhite       magenta           s=omit bold
+             +frame 9             brightwhite       brightgreen       s=omit bold
+             +frame 11            brightwhite       magenta           s=omit bold
+             +frame 12            brightwhite       magenta           s=omit bold
+             +frame 13            brightwhite       yellow            s=omit
+             +frame 14            brightwhite       magenta           s=omit bold
+             +frame 15            brightwhite       brightblack       s=omit
 
 ; Other conventional group names (see `:help group-name`)
-Boolean                 brightgreen       none
-Character               magenta           none
-Comment                 brightblack       none              italic
-    /256/8 +italic 0    brightblack       none
-Constant                green             none
-Debug                   magenta           none
-Delimiter               blue              none
-Error                   red               brightwhite       reverse
-Float                   brightgreen       none
-Function                green             none
-Identifier              blue              none
-Ignore                  yellow            none
-Include                 brightblue        none
-Keyword                 cyan              none
-Label                   green             none
-Number                  green             none
-Operator                cyan              none
-PreProc                 red               none
-Special                 red               none
-SpecialChar             magenta           none
-SpecialComment          magenta           none
-Statement               cyan              none
-StorageClass            cyan              none
-String                  brightred         none
-Structure               red               none
-Todo                    magenta           none              bold
-Type                    brightblue        none
-Underlined              none              none              underline
-CursorIM                none              brightwhite
-ToolbarLine             brightblack       white
-ToolbarButton           black             white             bold
+Boolean                           brightgreen       none              s=omit
+              /gui                omit              omit              s=none omit
+Character                         magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+Comment                           brightblack       none              s=omit italic
+              /gui                omit              omit              s=none omit
+              /256/8 +italic 0    brightblack       none              s=omit
+Constant                          green             none              s=omit
+              /gui                omit              omit              s=none omit
+Debug                             magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+Delimiter                         blue              none              s=omit
+              /gui                omit              omit              s=none omit
+Error                             red               brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+Float                             brightgreen       none              s=omit
+              /gui                omit              omit              s=none omit
+Function                          green             none              s=omit
+              /gui                omit              omit              s=none omit
+Identifier                        blue              none              s=omit
+              /gui                omit              omit              s=none omit
+Ignore                            yellow            none              s=omit
+              /gui                omit              omit              s=none omit
+Include                           brightblue        none              s=omit
+              /gui                omit              omit              s=none omit
+Keyword                           cyan              none              s=omit
+              /gui                omit              omit              s=none omit
+Label                             green             none              s=omit
+              /gui                omit              omit              s=none omit
+Number                            green             none              s=omit
+              /gui                omit              omit              s=none omit
+Operator                          cyan              none              s=omit
+              /gui                omit              omit              s=none omit
+PreProc                           red               none              s=omit
+              /gui                omit              omit              s=none omit
+Special                           red               none              s=omit
+              /gui                omit              omit              s=none omit
+SpecialChar                       magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+SpecialComment                    magenta           none              s=omit
+              /gui                omit              omit              s=none omit
+Statement                         cyan              none              s=omit
+              /gui                omit              omit              s=none omit
+StorageClass                      cyan              none              s=omit
+              /gui                omit              omit              s=none omit
+String                            brightred         none              s=omit
+              /gui                omit              omit              s=none omit
+Structure                         red               none              s=omit
+              /gui                omit              omit              s=none omit
+Todo                              magenta           none              s=omit bold
+              /gui                omit              omit              s=none omit
+Type                              brightblue        none              s=omit
+              /gui                omit              omit              s=none omit
+Underlined                        none              none              s=omit underline
+              /gui                omit              omit              s=none omit
+CursorIM                          none              brightwhite       s=omit
+              /gui                omit              omit              s=none omit
+ToolbarLine                       brightblack       white             s=omit
+              /gui                omit              omit              s=none omit
+ToolbarButton                     black             white             s=omit bold
+              /gui                omit              omit              s=none omit
 ; }}}
 
 ; Additional highlight groups {{{
-NormalMode           brightblack       brightwhite       reverse
-InsertMode           brightgreen       brightwhite       reverse
-ReplaceMode          brightred         brightwhite       reverse
-VisualMode           blue              brightwhite       reverse
-CommandMode          magenta           brightwhite       reverse
+NormalMode                        brightblack       brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+InsertMode                        brightgreen       brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+ReplaceMode                       brightred         brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+VisualMode                        blue              brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
+CommandMode                       magenta           brightwhite       s=omit reverse
+              /gui                omit              omit              s=none omit
 ; }}}
 
 ; NeoVim {{{
-TermCursor        -> Cursor
-TermCursorNC         brightwhite       black
+TermCursor -> Cursor
+TermCursorNC                      brightwhite       black             s=omit
+              /gui                omit              omit              s=none omit
 ; }}}
 
 ; B&W Variant {{{
@@ -327,3 +411,4 @@ Include: _bw.colortemplate
 Include: _demo.colortemplate
 ; }}}
 
+; vim: ft=colortemplate fdm=marker cc=35,53,71 vsts=34,18,18,4
